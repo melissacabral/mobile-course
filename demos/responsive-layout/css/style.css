@@ -1,0 +1,55 @@
+
+/*Mobile First! */
+html{
+	background-color:white;
+}
+
+body{
+	 font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size:100%;
+	background-color:red;
+	width: 98%;
+	max-width: 1000px;
+	margin:0 auto;
+	padding: 0;
+}
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  body{
+	background-color:orange;
+	}
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+    body{
+	background-color:yellow;
+	}
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+    body{
+	background-color:green;
+	}
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+    body{
+	background-color:blue;
+	}
+}
+@media only screen and (min-width: 1000px) {
+  /* 1382 =================================================== */
+  body {
+    background-color:violet;
+	
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+  body{
+  	font-size:200%;
+  	background-color:white;
+  }
+}
