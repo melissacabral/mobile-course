@@ -1,0 +1,38 @@
+/*Skinny Screen First */
+/* mini reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width:100%;
+	margin: 0 auto;
+}
+header{
+	background-color:#81DCB8;
+	padding: 1%;
+}
+main{
+	background-color:#EFE3BE;
+	padding: 1%;
+}
+aside{
+	background-color:#EFD3AB;
+	padding: 1%;
+}
+footer{
+	background-color:#165038;
+	padding: 1%;
+}
+
+/*
+Navigation
+ */
+ nav li a{
+ 	background-color: #8AB3A7;
+ 	display: block;
+ 	margin:.25em;
+ 	padding: 
+ 	text-align:center;
+
+ }
