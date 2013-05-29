@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title> Comparison of Em vs Rem units</title>
+	<style type="text/css">
+	div{
+		background-color: rgba(0,0,0,.1);
+		padding: 10px;
+		margin:10px;
+	}
+
+	body{
+		font-family: Cambria, Georgia, serif;
+		font-size:16px;
+	}
+	.parent{
+		font-size: 30px;
+	}
+
+	.child1{
+		font-size: .75em;
+	}
+	.child2{
+		font-size: .75rem;
+	}
+
+	</style>
+</head>
+
+
+<body> 
+	<div class="parent">
+		parent div = 30px
+		<div class="child1">
+			Child div = .75em 
+			<br />
+			This text is 22.5px. the parent font  is 30px and this font is 75% of that. 
+		</div>
+	</div>
+
+	<div class="parent">
+		parent div = 30px
+		<div class="child2">
+			Child div = .75 rem
+			<br />
+			This text is 12px. the body font is 16px and this font is 75% of that, regardless of the parent. 
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,133 @@
+/*Skinny Screen First 320 and up */
+/* mini reset */
+body, h1, h2, h3, h4, h5, h6, p, ul, li{
+	margin: 0;
+	padding: 0;
+}
+body{
+	width:100%;
+	margin: 0 auto;
+	font-family: Cambria, Georgia, serif;
+}
+header{
+	background-color:#81DCB8;
+	padding: 0 0 1% 0;
+}
+main{
+	background-color:#EFE3BE;
+	padding: 1%;
+}
+aside{
+	background-color:#EFD3AB;
+	padding: 1%;
+}
+footer{
+	color:#FFF;
+ 	text-align: center;
+ 	background-color: #414141;
+	padding: 1%;
+}
+
+/*
+Navigation
+ */
+ nav li a{
+ 	background-color: #8AB3A7;
+ 	display: block;
+ 	margin:.5em .25em;
+ 	padding:.25em; 
+ 	text-align:center;
+
+ }
+ /*
+ Typography
+ */
+ h1{
+ 	font-size:1.25em; /* 20/16*/
+ 	text-align: center;
+ 	background-color: #414141;
+ }
+ h1 a{
+color:white;
+text-decoration: none;
+
+ }
+ .button{
+ 	background-color: #56BFD6;
+ 	display:block;
+ 	padding:.5em; 	
+ 	text-align: center;
+ 	margin: 1em .25em;
+ 	-webkit-border-radius: .5em;
+border-radius: .5em;
+
+ }
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  header{
+  	padding: 0;
+  }
+  nav li{
+  	display: inline-block;
+  }
+  nav li a{
+  	display:inline-block;
+  }
+  .skip{
+  	display: none;
+  }
+
+
+}
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+  main{
+  	width:62%;
+  	float:left;
+  }
+  aside{
+  	width: 34%;
+  	float:right;
+  }
+  aside#sidebar2{
+  	clear:right;
+  }
+  footer{
+  	clear: both;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+}
+@media only screen and (min-width: 992px) {
+  /* 992 =================================================== */
+
+  main{
+  	width:54%;
+  	float:left;
+  }
+  aside{
+  	width: 20%;
+  	float:left;
+
+  }
+  aside#sidebar2{
+  	clear:none;
+  }
+  
+}
+@media only screen and (min-width: 1382px) {
+  /* 1382 =================================================== */
+  body {
+    max-width: 90em; /*1440/16*/
+  }
+}
+/* TODO:  */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+  body{
+  	font-size:150%;
+  }
+}
