@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Fun</title>
+<link rel="stylesheet" href="css/normalize.css">
+<link href="css/form.css" rel="stylesheet">
+
+<style>
+#signup label.error{
+	font-size:0.8em;
+	color:#f00;
+	font-weight:bold;
+	font-variant:normal;
+	display:block;
+	
+}
+#signup input.error,
+#signup select.error {
+	background:rgba(153,0,0,0.25);
+	background:#ffa988;
+	border:2px solid #F00;
+}
+
+</style>
+
+<script src="scripts/jquery-1.10.1.min.js"></script>
+<script src="scripts/jquery.validate.min.js"></script>
+<script>
+//select field does not validate if required is included
+//<script src="scripts/jquery-1.7.2.min.js">
+$(document).ready(function() {
+$('#signup').validate(
+{
+		rules:{
+			name:'required',
+			email:{
+				required:true,
+				email:true	
+			},//end email
+			url:{
+				required:true,
+				
+			},
+			hobby:'required',//endurl
+			gender:'required'//end confirm password
+		},//end rules
+		
+			messages:{
+				name:{
+					required:"Please supply your name"
+				},
+				email:{
+					required:"Please supply your email address",
+					email:"this is not a valid email address"
+				},//email message end
+				url:{
+					required:"Please enter your url"
+					
+				},//url end
+				gender:{
+					required:"Please choose a gender"
+				},
+				hobby:{
+					required:"Please choose an hobby"
+				}//hobby end
+			},//end messages
+			errorPlacement:function(error,element){
+				if(element.is(":radio")||element.is(":checkbox")){
+					error.appendTo(element.parent());
+					//need to fix placement. add parent
+				}else{
+					error.insertAfter(element);
+				}
+			}//end error function
+	}
+
+
+
+);
+}); // end ready
+</script>
+   
+</head>
+<body>
+
+<form action="" method="post" name="signup" id="signup" novalidate >
+ <fieldset id="generalInfo">
+    <legend><span>Contact Info </span></legend>
+        <label for="name" class="label">Name </label>
+        <input name="name" type="text" class="required" required>
+        
+        <label for="email">E-mail Address</label>
+        <input name="email" type="text" class="required" required>
+        
+        <label for="url" class="label">URL</label>
+				<input name="url" type="url" id="url" class="required" placeholder="http://www.maryjoe.com" required>
+                
+                <label for="state">State</label>
+              <select name="state" id="state" tabindex="150">
+              	<option value="">--Please select one--</option>
+              	<option value="FU">None of Your Business</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KA">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+              </select>
+
+				 <label for="message"> Your Message </label>
+                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5"></textarea>      
+
+        </fieldset>
+        
+        <fieldset id="personalInfo">
+        	<legend><span>Personal Info</span></legend>
+            <div>
+            	<div class="label">Please Select Your gender </div>
+            	<input  type="radio" name="gender" id="gender" value="male" class="required" required title="Please select an option">
+				<label for="male">Male</label>
+				<input type="radio" name="gender" id="female" value="female">
+				<label for="female">Female</label>
+                <input type="radio" name="gender" id="neither" value="neither">
+				<label for="neither">Neither</label>
+                <input type="radio" name="gender" id="both" value="both">
+				<label for="both">Both</label>
+                </div>
+                <label for="planet" class="label planet">Planet of Birth</label>
+				<select name="planet" id="planet" class="required" title="Please choose a planet">
+					<option value="">--Please select one--</option>
+					<option value="earth">Earth</option>
+					<option value="mars">Mars</option>
+                    <option value="uranus">Uranus</option>
+					<option value="alpha centauri">Alpha Centauri</option>
+					<option value="forget about it">You've never heard of it</option>
+				</select>
+
+            	<div class="label">Hobbies</div>
+				<input name="hobby" type="checkbox" id="sleeping" value="sleeping" class="required" required>
+				<label for="sleeping">Sleeping</label>
+				<input name="hobby" type="checkbox" id="coding" value="coding">
+				<label for="coding">Coding</label>
+				<input name="hobby" type="checkbox" id="eating" value="eating">
+				<label for="eating">Eating</label>
+                
+                </fieldset>
+        
+        <input type="submit" name="submit" id="submit" value="Submit">
+    
+    </form>
+    
+</body>
+</html>
+    
