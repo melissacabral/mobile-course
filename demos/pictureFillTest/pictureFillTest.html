@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="html">
+<head>
+<meta charset="UTF-8">
+<title>testing PictureFill</title>
+<style>
+img{
+	max-width:100%;
+}
+</style>
+<script src="scripts/matchmedia.js"></script>
+<script src="scripts/picturefill.js"></script>
+</head>
+<body>
+<section>
+
+	<span data-picture data-alt="a tropical beach">
+        <span data-src="images/beach_small.jpg"></span>
+        <span data-src="images/beach_med.jpg"     data-media="(min-width: 340px)"></span>
+        <span data-src="images/beach_lrge.jpg"      data-media="(min-width: 800px)"></span>
+        <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+        <noscript>
+            <img src="images/beach_small.jpg" alt="a tropical beach">
+        </noscript>
+    </span>
+</section>
+</body>
+</html>
