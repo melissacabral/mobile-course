@@ -2,19 +2,8 @@
 
 /* CSS Document */
 
-/*copyright lynda.com 2011
-feel free to use these styles as you wish
-attribution would be nice, but not required
-*/
+/* color palette
 
-/* desolve color palette
-#4C4341     rgb(76, 67, 65)  ASH
-#646266      rgb(100, 98, 102)  DULL GRAY
-#7B798F     rgb(123, 121, 143)  PEWTER BLUE
-#ADA982    rgb(173, 169, 130)  DARK TAN
-#D8D5BC   rgb(216, 213, 188)  MED TAN
-#EDE4D6   rgb(237, 228, 214)  LIGHT TAN
-#667F6A     rgb(102, 127, 106)  DARK GREEN
 */
 /*Fonts*/
 @font-face {
@@ -95,6 +84,9 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 .cf {
 	zoom:1;
 }
+/*
+== Basic Links
+*/
 a {
 	text-decoration: none;
 	color: #667F6A;
@@ -130,16 +122,18 @@ a.phone:hover {
 	color: inherit;
 	cursor: default;
 }
-
+/* 
+== Basic Layout
+*/
 html {
-	background: rgb(123, 121, 143);
+	background: rgb(70, 36, 69);
 }
 
 body {
 	font: 100% Cantarell, Arial, Helvetica, sans-serif;
 	line-height: 1.5;
-	background: #fff;
-	color: rgb(76, 67, 65);
+	background: #efefef;
+	color: #000
 	font-weight:normal;
 	font-style:normal;
 }
@@ -147,18 +141,19 @@ body {
 #mainNav h2, #mainNav #menuToggle {
 	display: none;
 }
-
+#mainNav{
+	background-color:#64384f;
+}
 nav ul {
 	list-style: none;
 }
 
 /*header styles*/
 header {
-	background: rgb(100, 98, 102);
 	width: 100%;
 	padding-top: 1px;
 	overflow: hidden;
-	margin-bottom: 1.5em;
+	background-color:#462445;
 }
 
 header h1 {
@@ -179,7 +174,6 @@ header a:hover {
 
 /*nav styles*/
 #mainNav {
-	margin-bottom: .5em;
 	width: 100%;
 }
 #mainNav li {
@@ -1187,20 +1181,17 @@ body {
 }
 /*header styles*/
 header {
-	height: 165px;
-	margin-bottom: 1em;
+	height: 96px;
+	
 }
 
 header h1 {
 	font-size: 3.2em;
 	padding-left: 110px;
-	line-height: 100px;
-	line-height: 165px;
-	margin-right: .5em;
+
 	float: left;
 	margin-left: 3.9%;/* fixes nasty 1px header fitting problem*/
-	display: inline;
-	background: url(../images/desolve_logo.png) no-repeat left center;
+	
 }
 
 header h2 {
@@ -1217,8 +1208,7 @@ header h2 {
 
 /*nav styles*/
 #mainNav {
-	padding-left: 3.9%;
-	margin-bottom:1em;
+	padding:1em 0;
 }
 #mainNav li {
 	margin-right: 3%;
