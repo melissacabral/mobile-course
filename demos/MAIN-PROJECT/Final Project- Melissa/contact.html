@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Welcome to Desolve</title>
+<title>Reach out to us</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
 <!-- 57x57 older iPhone and Android devices -->
 <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
 <!-- iPad 1 and 2 & iPad mini -->
@@ -18,7 +18,7 @@
 <body>
 <header id="pageHeader" role="banner">
   <hgroup>
-    <h1>MetaMorph</h1>
+    <h1><a href="index.htm">Desolve</a></h1>
     <h2>Fine Urban Photography</h2>
   </hgroup>
 </header>
@@ -58,36 +58,51 @@
     <li><a href="about.htm" title="Who are you guys?" class="about">About</a></li>
   </ul>
 </nav>
-<section id="content" role="main" class="cf">
-  <div class="mission">
-    <h1>We love urban photography</h1>
-    <p>We’re betting you do to. Welcome to our site, a growing collection of galleries taken by a small group of passionate urban photographers. Visit our galleries, buy some of our prints, or drop us a line. While you’re at it, feel free to submit a gallery of your own. <strong>Welcome</strong>.</p>
-  </div>
-  <article id="latest">
-    <h1>Our latest galleries</h1>
-    <section class="philly">
-      <h2><a href="philadelphia.htm" title="Philadelphia gallery">Philadelphia</a></h2>
-      <p class="pubdate">
-        <time datetime="2011-08-16" pubdate>Aug 2011</time>
-      </p>
-      <div class="preview"><a href="philadelphia.htm" title="Philadelphia gallery"></a></div>
-      <p class="caption">Join us as we visit the city of brotherly love.</p>
+<section id="content" role="main">
+  <article id="contact" class="cf">
+    <h1>Interact with us</h1>
+    <section class="social">
+    <h2>Feel free to call us, we could totally hang.</h2>
+    <p><a href="tel:8885551234" title="ring ring ring" class="phone">888-555-1234</a></p>
+    <h2>Or, maybe you're the more social type...</h2>
+    <ul class="connect">
+    <li><a href="http://twitter.com/#!/jameswillweb" title="follow us on Twitter" class="twitter">Twitter</a></li>
+    <li><a href="http://www.flickr.com/" title="Join our Flickr group" class="flickr">Flickr</a></li>
+    <li><a href="http://www.facebook.com" title="Be our friend...PLEASE" class="facebook">Facebook</a></li>
+    <li><a href="http://linkedin.com" title="Please join our professional network on LinkedIn" class="linked">LinkedIn</a></li>
+    <li><a href="https://plus.google.com" title="help us figure out Google+" class="google">Google+</a></li>
+    <li><a href="http://www.youtube.com" class="youtube">YouTube</a></li>
+    </ul>
     </section>
-    <section class="chicago">
-      <h2><a href="chicago.htm" title="Chicago gallery">Chicago</a></h2>
-      <p class="pubdate">
-        <time datetime="2011-04-24" pubdate>April 2011</time>
-      </p>
-      <div class="preview"><a href="chicago.htm" title="Chicago gallery"></a></div>
-      <p class="caption">Big wind, big shoulders. See a different side of Chicago.</p>
-    </section>
-    <section class="nyc">
-      <h2><a href="new_york.htm" title="New York gallery">New York</a></h2>
-      <p class="pubdate">
-        <time datetime="2011-01-10" pubdate>Jan 2011</time>
-      </p>
-      <div class="preview"><a href="new_york.htm" title="New York gallery"></a></div>
-      <p class="caption">A little Christmas magic, Big Apple style.</p>
+    <section class="contact">
+    <h2>Or drop us a line....</h2>
+    <form id="frmContact" action="http://www.desolve.org" method="post">
+    <fieldset title="About you">
+    <legend><span>About you</span></legend>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" tabindex="10" placeholder="Your name" required>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" tabindex="20" placeholder="valid email" required>
+      <label for="website">Personal website</label>
+      <input type="url" name="website" id="website" tabindex="30" placeholder="website" required>
+    </fieldset>
+    <fieldset title="Your turn">
+    <legend><span>Your turn</span></legend>
+     <p>What, exactly then, are you after?</p>
+       <input type="radio" name="intent" value="suggest" id="suggest" tabindex="40">
+       <label for="suggest" class="inline">Suggest a city</label><br>
+         <input type="radio" name="intent" value="submit" id="submit" tabindex="50">
+       <label for="submit" class="inline">Submit my own gallery</label><br>
+          <input type="radio" name="intent" value="comment" id="comment" tabindex="60">
+       <label for="comment" class="inline">Comment on a gallery</label><br>
+        <input type="radio" name="intent" value="friends" id="friends" tabindex="70">
+       <label for="friends" class="inline"> Make friends</label><br>
+         <label for="discourse">Pour out your heart</label>
+         <textarea id="discourse" name="discourse" tabindex="80" rows="7" placeholder="This is where your thoughts go">
+         </textarea>
+         <input type="submit" name="submit" id="submit" value="Oh really?" tabindex="90">
+    </fieldset>
+    </form>
     </section>
   </article>
   <aside role="complementary">
@@ -122,7 +137,7 @@
   </aside>
 </section>
 <footer id="pageFooter">
-  <form action="http://desolve.org" method="post" class="search-form">
+  <form action="http://desolve.org" method="post" class="search-form" role="search">
     <label for="search">Looking for something?</label>
     <input type="search" placeholder="Search" title="Search" class="q" name="search" id="search">
     <input type="submit" class="submit" value="Go" name="submit">

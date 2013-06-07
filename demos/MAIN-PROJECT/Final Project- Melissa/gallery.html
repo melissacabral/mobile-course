@@ -2,23 +2,24 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Reach out to us</title>
+<title>Welcome to Desolve</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="shortcut icon" href="../favicon.ico">
 <!-- 57x57 older iPhone and Android devices -->
-<link rel="apple-touch-icon-precomposed" href="_images/apple-touch-icon-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
 <!-- iPad 1 and 2 & iPad mini -->
-<link rel="apple-touch-icon" sizes="72x72" href="_images/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 <!-- iPhone 4, 4S, 5 and iPod Touch -->
-<link rel="apple-touch-icon" sizes="114x114" href="_images/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 <!-- iPad 3rd gen -->
-<link rel="apple-touch-icon" sizes="144x144" href="_images/apple-touch-icon-144x144.png">
-<link href="_css/main.css" rel="stylesheet" media="screen, projection">
+<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+<link href="css/main.css" rel="stylesheet" media="screen, projection">
+<link href="css/photoswipe.css" rel="stylesheet" media="screen, projection">
 </head>
 <body>
 <header id="pageHeader" role="banner">
   <hgroup>
-    <h1><a href="index.htm">Desolve</a></h1>
+    <h1>Desolve</h1>
     <h2>Fine Urban Photography</h2>
   </hgroup>
 </header>
@@ -59,51 +60,23 @@
   </ul>
 </nav>
 <section id="content" role="main">
-  <article id="contact" class="cf">
-    <h1>Interact with us</h1>
-    <section class="social">
-    <h2>Feel free to call us, we could totally hang.</h2>
-    <p><a href="tel:8885551234" title="ring ring ring" class="phone">888-555-1234</a></p>
-    <h2>Or, maybe you're the more social type...</h2>
-    <ul class="connect">
-    <li><a href="http://twitter.com/#!/jameswillweb" title="follow us on Twitter" class="twitter">Twitter</a></li>
-    <li><a href="http://www.flickr.com/" title="Join our Flickr group" class="flickr">Flickr</a></li>
-    <li><a href="http://www.facebook.com" title="Be our friend...PLEASE" class="facebook">Facebook</a></li>
-    <li><a href="http://linkedin.com" title="Please join our professional network on LinkedIn" class="linked">LinkedIn</a></li>
-    <li><a href="https://plus.google.com" title="help us figure out Google+" class="google">Google+</a></li>
-    <li><a href="http://www.youtube.com" class="youtube">YouTube</a></li>
+  <article id="gallery">
+    <h1 class="galleryTitle">Philadelphia</h1>
+    <div class="intro">
+      <p>In August we traveled to Philadelphia for a weeks worth of shooting. Although we didn’t find much brotherly love, we did find a lot to love about Ben Franklin’s old home, From the amazing 30th Street Station to a turn of the century brothel, we cover it all.</p>
+    </div>
+    <div class="photos">
+    <ul id="photoGallery">
+    <li><a href="images/gallery/philly_01_lg.jpg" title="street at night"><img src="images/gallery/philly_01.jpg" alt="street at night"></a></li>
+    <li><a href="images/gallery/philly_02_lg.jpg" title="beautiful dome"><img src="images/gallery/philly_02.jpg" alt="beautiful dome"></a></li>
+    <li><a href="images/gallery/philly_03_lg.jpg" title="skyline at night"><img src="images/gallery/philly_03.jpg" alt="skyline at night"></a></li>
+    <li><a href="images/gallery/philly_04_lg.jpg" title="angels wings"><img src="images/gallery/philly_04.jpg" alt="angels wings"></a></li>
+    <li><a href="images/gallery/philly_05_lg.jpg" title="crossing zone"><img src="images/gallery/philly_05.jpg" alt="crossing zone"></a></li>
+    <li><a href="images/gallery/philly_06_lg.jpg" title="apartments"><img src="images/gallery/philly_06.jpg" alt="apartments"></a></li>
+    <li><a href="images/gallery/philly_07_lg.jpg" title="construction at dusk"><img src="images/gallery/philly_07.jpg" alt="construction at dusk"></a></li>
+    <li><a href="images/gallery/philly_08_lg.jpg" title="liberty place"><img src="images/gallery/philly_08.jpg" alt="liberty place"></a></li>
     </ul>
-    </section>
-    <section class="contact">
-    <h2>Or drop us a line....</h2>
-    <form id="frmContact" action="http://www.desolve.org" method="post">
-    <fieldset title="About you">
-    <legend><span>About you</span></legend>
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" tabindex="10" placeholder="Your name" required>
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" tabindex="20" placeholder="valid email" required>
-      <label for="website">Personal website</label>
-      <input type="url" name="website" id="website" tabindex="30" placeholder="website" required>
-    </fieldset>
-    <fieldset title="Your turn">
-    <legend><span>Your turn</span></legend>
-     <p>What, exactly then, are you after?</p>
-       <input type="radio" name="intent" value="suggest" id="suggest" tabindex="40">
-       <label for="suggest" class="inline">Suggest a city</label><br>
-         <input type="radio" name="intent" value="submit" id="submit" tabindex="50">
-       <label for="submit" class="inline">Submit my own gallery</label><br>
-          <input type="radio" name="intent" value="comment" id="comment" tabindex="60">
-       <label for="comment" class="inline">Comment on a gallery</label><br>
-        <input type="radio" name="intent" value="friends" id="friends" tabindex="70">
-       <label for="friends" class="inline"> Make friends</label><br>
-         <label for="discourse">Pour out your heart</label>
-         <textarea id="discourse" name="discourse" tabindex="80" rows="7" placeholder="This is where your thoughts go">
-         </textarea>
-         <input type="submit" name="submit" id="submit" value="Oh really?" tabindex="90">
-    </fieldset>
-    </form>
-    </section>
+    </div>
   </article>
   <aside role="complementary">
     <nav class="archives">
@@ -125,18 +98,18 @@
     </nav>
     <section class="contest">
       <h2>This month's contest</h2>
-      <img src="_images/contest.jpg" width="200" height="200" alt="This month's contest">
+      <img src="images/contest.jpg" width="200" height="200" alt="This month's contest">
       <p>Do you know where this is? Send your guess to us via the contact page. All correct entries will be added to a drawing at the end of the month. The randomly selected winner will win a framed print of their choice from our shop. Cool! <span class="enter"><a href="#" title="enter our contest">Enter</a></span></p>
     </section>
     <section class="contest">
       <h2>Previous contest</h2>
-      <img src="_images/previous.jpg" width="200" height="200" alt="This month's contest">
-      <h3>Cultural District, Denver CO</h3>
+      <img src="images/previous.jpg" width="200" height="200" alt="This month's contest">
+            <h3>Cultural District, Denver CO</h3>
       <p>Congratulations to Daniel Weston, who correctly identified this shot as being located in the cultural district of Denver, Colorado! For his efforts, Daniel wins a limited edition print of this shot. Way to go Daniel!</p>
     </section>
   </aside>
 </section>
-<footer id="pageFooter">
+<footer id="pageFooter" role="contentinfo">
   <form action="http://desolve.org" method="post" class="search-form" role="search">
     <label for="search">Looking for something?</label>
     <input type="search" placeholder="Search" title="Search" class="q" name="search" id="search">
@@ -145,21 +118,29 @@
   <p><a href="http://www.twitter.com/jameswillweb">twitter</a></p>
   <p class="notice">&copy; 2011 desolve.org</p>
 </footer>
-<script src="_scripts/modernizr.custom.js"></script>
+<script src="scripts/modernizr.custom.js"></script>
 <script>
 //use the modernizr load to load up external scripts. This will load the scripts asynchronously, but the order listed matters. Although it will load all scripts in parallel, it will execute them in the order listed
 Modernizr.load([
 {
     load: [  
         'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js',
-		'_scripts/desolve.js'  
-    ]
-},
-{
+		'scripts/klass.min.js',
+		'scripts/code.photoswipe.jquery-3.0.5.js',
+		'scripts/desolve.js'  
+  	  ],
+	  complete: function() {
+		  var myPhotoSwipe = $("#photoGallery a").photoSwipe({});
+	  }
+	},
+	{
 	// test for media query support, if not load respond.js
     test : Modernizr.mq('only all'),
     // If not, load the respond.js file
     nope : '/js/respond.js' 
+	},
+	{
+	
 }
 ]); 
 </script>
