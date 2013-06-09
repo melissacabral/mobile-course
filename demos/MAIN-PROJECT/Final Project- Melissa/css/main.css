@@ -285,7 +285,7 @@ header h2 {
 
 
 /*article styles*/
-article {
+#main {
 	width: 90%;
 	margin: 0 auto;
 }
