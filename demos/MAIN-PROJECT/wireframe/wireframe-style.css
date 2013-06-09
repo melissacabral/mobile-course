@@ -83,7 +83,8 @@ nav[role=navigation] li a {
 end nav
 */
 
-@media screen and (min-width: 37.5em) { /* 600px */
+/*tablet styles*/
+@media only screen and (min-width:480px) {
 	/* 
 	== toggle nav  turns back into normal horizontal nav
 	http://codepen.io/bradfrost/pen/sHvaz 
@@ -114,7 +115,8 @@ end nav
 		float:left;
 	}
 }
-@media screen and (min-width: 50em) { /* 800px */
+/*desktop styles*/
+@media only screen and (min-width:769px) {
 	/* main area becomes 2 column layout
 	*/
 	main article{
