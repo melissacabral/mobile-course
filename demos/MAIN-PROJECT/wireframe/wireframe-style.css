@@ -1,0 +1,18 @@
+*{
+	background-color: rgba(0,0,0,.2) !important;
+	border:solid 1px black !important;
+}
+body{
+	width:100%;
+	max-width:1200px;
+	margin:0 auto;
+}
+header h1{
+	min-height:100px;
+}
+header nav ul{ 
+	display:none;
+}
+header nav:active ul{
+	display:block;
+	}
