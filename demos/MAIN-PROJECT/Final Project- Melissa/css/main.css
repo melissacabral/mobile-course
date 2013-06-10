@@ -198,9 +198,9 @@ header h2 {
 	text-transform: uppercase;
 	cursor: pointer;
 }
-#mainNav a:hover {
-	color: white;
-}
+#mainNav a:hover{
+		background-color: #b0606d;
+	}
 #mainNav a.current {
 	color: rgb(123, 121, 143);
 	cursor: default;
@@ -255,18 +255,13 @@ article{
 	margin:0 auto;
 }
 article section {
-	border-bottom: 2px solid rgb(76, 67, 65);
+	
 	margin-bottom: 2em;
 }
 
 article h1 {
-	font: 1.8em;
-	border-bottom: 2px solid rgb(76, 67, 65);
-	margin-bottom: 1.5em;
-}
-article .video-box{
-	width:50%;
-	float:right;
+	font-size: 1.8em;
+	
 }
 
 article h2 a {
@@ -285,20 +280,17 @@ article h2 a:hover {
 }
 
 article section {
-	border-bottom: 2px solid rgb(76, 67, 65);
+
 	margin-bottom: 1.6em;
 	overflow: hidden;
 	position: relative;
 	padding-bottom: 20px;
 }
 
-article h1 {
-	background: url(../images/icon_sprites_50.png) no-repeat right top;
-	padding: 20px 0 5px;
-}
+
 
 article h2 {
-	font: 2em;
+	font-size: 2em;
 	margin-bottom: 0;
 }
 
@@ -315,6 +307,7 @@ article p.pubdate {
 
 article .preview {
 	height: 175px;
+	width:100%;
 }
 
 .philly .preview {
@@ -669,7 +662,7 @@ aside h2 {
 
 /*tablet styles*/
 @media only screen and (min-width:480px) {
- 	/* make the menu come back */
+	/* make the menu come back */
 	.topMenu {
 		max-height: auto;
 		visibility: visible;
@@ -695,7 +688,7 @@ aside h2 {
 	#mainNav {
 		width: 100%;
 		font-size: 90%;
-		padding:.75em 0;
+		padding: 0;
 		margin-bottom:0;
 	}
 	.topMenu {		
@@ -703,7 +696,7 @@ aside h2 {
 	}
 
 	#mainNav li {
-		margin-right: 5%;
+		
 		position: relative;
 		width: auto;
 	}
@@ -712,13 +705,13 @@ aside h2 {
 		margin-right: 0;
 	}
 
-	#mainNav a, #mainNav h3 {
+	#mainNav a {
 		font-size: 1em;
 		text-align: center;
 		cursor: pointer;
+		padding:.75em 1em;
 	}
 	
-
 	/*mission styles*/
 	.mission {
 		padding-left: 3.9%;
@@ -737,27 +730,26 @@ aside h2 {
 		text-align: center;
 		margin-top: 1em;
 		text-shadow: 0px -1px 0px #29211c;
-        filter: dropshadow(color=#29211c, offx=0, offy=-1);
+		filter: dropshadow(color=#29211c, offx=0, offy=-1);
 	}
 
 
 	/* article styles */
 	
 	article section {
-		border-bottom: 2px solid rgb(76, 67, 65);
-		margin-bottom: 1.6em;
+		
 		overflow: hidden;
 		position: relative;
 		padding-bottom: 1.6em;
 	}
 
-	article h1 {
-		background: url(../images/icon_sprites_50.png) no-repeat right top;
-		padding: 20px 0 5px;
+	article .video-box{
+		width:55%;
+		float:right;
 	}
 
 	article h2 {
-		font: 2.4em;
+		font-size: 2.4em;
 		float: left;
 		clear: left;
 		margin-bottom: 0;
@@ -777,7 +769,7 @@ aside h2 {
 		text-transform: uppercase;
 		float: left;
 		clear: left;
-		margin: 0 0 4em;
+		margin: 0 0 1em;
 		width: 40%;
 	}
 
@@ -990,6 +982,7 @@ aside h2 {
 		float: left;
 		width:50%;
 		background-position: left top;
+		margin-top:1em;
 	}
 	header h2 {
 		font-family: Cantarell, Arial, Helvetica, sans-serif;
@@ -1013,16 +1006,20 @@ aside h2 {
 		visibility: visible;
 	}
 	#mainNav {
-		padding:1em 0;
+		padding:0;
 	}
 	#mainNav li {
-		margin-right: 3%;
+		margin-right:0;
 		position: relative;
 	}
-	#mainNav a, #mainNav h3 {
-		font-size: 1.2em;
+	#mainNav a{
+		font-size: 1em;
 		text-align: center;
-		padding: 0 1em;
+		padding:  1em 2em;
+		
+	}
+	#mainNav a:hover{
+		background-color: #b0606d;
 	}
 	
 	/*mission styles*/
@@ -1052,37 +1049,38 @@ aside h2 {
 	}
 
 	article section {
-		border-bottom: 2px solid rgb(76, 67, 65);
+		
 		margin-bottom: 2em;
 	}
 
-	article h1 {
-		background: url(../images/icon_sprites_50.png) no-repeat right top;
-		padding: 20px 0 5px;
-	}
+
 
 	article h2 {
 		font-size: 2.8em;
-		float: left;
+		float: none;
+		width:auto;
 		margin-bottom: .1em;
 	}
 
 	article p {
 		font-size:1.2em;
 		margin: .8em 0;
+		float:none;
 	}
 
 	article p.pubdate {
 		font-size: 1.2em;
 		text-transform: uppercase;
-		float: right;
+		float: none;
 		padding-top: .8em;
 		margin:0;
 	}
 
 	article .preview {
 		height: 250px;
-		clear:both;
+		clear:both;	
+		position:static;
+		width: 100%;
 	}
 
 	.philly .preview {
@@ -1206,6 +1204,11 @@ aside h2 {
 	aside nav {
 		margin-bottom: 2em;
 	}
+	aside nav h2 {
+		float: none;
+		margin-right: 0;
+		
+	}
 
 	aside nav a {
 		display:block;
@@ -1217,11 +1220,16 @@ aside h2 {
 	}
 
 	aside nav li {
+		padding: .5em ;
 		background: rgb(216, 213, 188);
-	}
-
-	aside nav li:nth-child(even) {
-		background: rgb(237, 228, 214);
+		background: #e5e5e5; /* Old browsers */
+		background: -moz-linear-gradient(top,  #e5e5e5 0%, #dddddd 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e5e5e5 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e5e5e5 0%,#dddddd 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e5e5e5 0%,#dddddd 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #e5e5e5 0%,#dddddd 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
 	}
 
 	aside nav a:hover {
