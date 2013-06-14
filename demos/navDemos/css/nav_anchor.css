@@ -100,7 +100,8 @@ main h3{
 	color:#FFF;
 	text-transform: uppercase;
 	font-weight:normal;
-	background-color:#B1824C;	
+	background-color:#B1824C;
+	border-bottom:#4E2D26 3px solid;	
 }
 
 main h3 a{
@@ -145,10 +146,14 @@ nav ul {
 	position: relative;
 }
 
-li.toTop{
-	font-size:0.9em;
+li.toTop {
+	font-size:0.65em;
 	font-style:italic;
 	text-align:center;
+}
+
+li.toTop a{
+	padding:0.65em 0;
 }
 
 
@@ -249,7 +254,7 @@ input[type="submit"] {
 	}
 	/*header styles*/
 	header{
-		height:140px;
+		height:135px;
 	}
 	header h1{
 		text-align:left;
@@ -262,11 +267,11 @@ input[type="submit"] {
 
 /*nav styles*/
 	#mainNav {
-		width: 90%;
+		width:inherit;
 		padding: 0;
 		position:absolute;
-		
 		top:80px;
+		border-bottom:#4E2D26 3px solid;	
 	}
 	
 	#mainNav li {
@@ -332,10 +337,13 @@ input[type="submit"] {
 @media only screen and (min-width:769px) {
 
 	body {
-		width: 90%;
-		margin: 0 auto;
-		max-width: 1080px;
+		max-width: 1080px;	
 	}
+	#mainNav{
+		max-width:inherit;
+		
+	}
+	
 	#mainNav a {
 		font-size: 1.1em;
 		padding:.5em 1.3em 0.25 1.5em;		

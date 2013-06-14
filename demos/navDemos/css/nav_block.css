@@ -234,11 +234,13 @@ input[type="submit"] {
 		width: 100%;
 		padding: 0;
 		margin-bottom:0;
+	border-bottom:#4E2D26 3px solid;	
 	}
 	
 	#mainNav li {
 		float: left;
 		width: auto;
+		margin-right:0;
 	}
 
 	#mainNav a {
@@ -295,18 +297,10 @@ input[type="submit"] {
 @media only screen and (min-width:769px) {
 
 	body {
-		width: 90%;
-		margin: 0 auto;
 		max-width: 1080px;
 	}
 	
-	#mainNav {
-		padding:0;
-	}
-	#mainNav li {
-		margin-right:0;
-		
-	}
+
 	#mainNav a{
 		font-size: 1em;
 		text-align: center;
