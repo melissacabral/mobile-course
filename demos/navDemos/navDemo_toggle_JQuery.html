@@ -3,38 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Let's navigate: responsive navigation patterns - Do Nothing</title>
+<title>Let's navigate: responsive navigation patterns</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/normlize.css">
-<link href="css/nav_select.css" rel="stylesheet" media="screen, projection">
+<link href="css/toggle2.css" rel="stylesheet" media="screen, projection">
+<script src="scripts/jquery-1.10.1.min.js"></script>
 
-<script src="scripts/jquery-1.7.2.min.js"></script>
-<script src="scripts/jquery.mobilemenu.min.js"></script>
-<script>
-$(document).ready(function() {
-	$('.topMenu').mobileMenu(
-	{
-		switchWidth:465
+<script type="text/javascript">
+/* The function will prepend the <div id="menu-icon"> in the <nav id="#nav-wrap"> tag. When the #menu-icon element is clicked, it will slide down the navigation.*/
+
+$(document).ready(function($){
+
+	/* prepend menu icon */
+	$('#mainNav').prepend('<div id="menu-icon">Menu</div>');
+	
+	/* toggle nav */
+	$("#mainMenu").on("click", function(){
+		$("#nav").slideToggle();
+		$(this).toggleClass("active");
 	});
-});//end ready
+
+});
 </script>
 
 </head>
 
 <body>
-
 <header id="pageHeader" role="banner">
      <h1>Navigate</h1>
 </header>
-
+<a href="#content" class="skip">Skip navigation</a>
 <nav id="mainNav" role="navigation" class="cf">
-     <ul class="topMenu expand">
-      <li><a href="link1">Link 1</a></li>
-      <li><a href="link2">Link 2</a></li>
-      <li><a href="link3">Link 3</a> </li>
-      <li><a href="link4">Link 4</a> </li>
-      <li><a href="link5">Link 5</a></li>
-	</ul>
+    
+     <ul id="nav">
+          <li><a href="#">Link 1</a> </li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a> </li>
+          <li><a href="#">Link 4</a> </li>
+          <li><a href="#">Link 5</a></li>
+          
+     </ul>
 </nav>
 <main id="content" role="main" class="cf">
      <div class="mission">
@@ -67,6 +75,7 @@ $(document).ready(function() {
      </form>
      <p class="notice">&copy; 2013 Platt College</p>
 </footer>
+
 
 </body>
 </html>

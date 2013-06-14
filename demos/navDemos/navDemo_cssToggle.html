@@ -3,40 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Let's navigate: responsive navigation patterns - Do Nothing</title>
+<title>Let's navigate: responsive navigation patterns</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="css/normlize.css">
-<link href="css/nav_select.css" rel="stylesheet" media="screen, projection">
+<link href="css/nav_cssToggle.css" rel="stylesheet" media="screen, projection">
 
-<script src="scripts/jquery-1.7.2.min.js"></script>
-<script src="scripts/jquery.mobilemenu.min.js"></script>
-<script>
-$(document).ready(function() {
-	$('.topMenu').mobileMenu(
-	{
-		switchWidth:465
-	});
-});//end ready
-</script>
 
 </head>
 
-<body>
-
-<header id="pageHeader" role="banner">
+<body id="top">
+<header  role="banner">
      <h1>Navigate</h1>
 </header>
-
-<nav id="mainNav" role="navigation" class="cf">
-     <ul class="topMenu expand">
-      <li><a href="link1">Link 1</a></li>
-      <li><a href="link2">Link 2</a></li>
-      <li><a href="link3">Link 3</a> </li>
-      <li><a href="link4">Link 4</a> </li>
-      <li><a href="link5">Link 5</a></li>
-	</ul>
-</nav>
+<h3 ><a href="#nav" title="got to the navigation" id="jump">Menu  &darr;</a></h3>
 <main id="content" role="main" class="cf">
+	
      <div class="mission">
           <h1>Get Me Out of Here!</h1>
      </div>
@@ -59,6 +40,18 @@ $(document).ready(function() {
           
      </article>
 </main>
+<nav id="mainNav" role="navigation" class="cf">
+     
+     <ul id="nav">
+          <li><a href="#">Link 1</a> </li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a> </li>
+          <li><a href="#">Link 4</a> </li>
+          <li><a href="#">Link 5</a></li>
+          <li class="toTop"><a href="#top">&uarr;  Collapse </a></li>
+          
+     </ul>
+</nav>
 <footer id="pageFooter">
      <form action="#" method="post" class="search-form">
           <label for="search">Looking for something?</label>
