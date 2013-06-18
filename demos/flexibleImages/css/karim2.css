@@ -4,57 +4,54 @@
 /*COLORS
 magenta: #f74ec6
 gray:9393939;
-BEIGE:#D0C1B1
+BEIGE:#
 */
 @import url(http://fonts.googleapis.com/css?family=Fjalla+One|Rambla);
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-
+/** { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+*/
 html{
     background-color:#939393;
 }
 body{
     font-size:100%;
     background:url(../images/bkgCol.gif) 70% top repeat-y;
-   width:95%;
-    max-width:3000px;
-    min-width: 480px;
+   	width:95%;
+    /*max-width:3000px;
+    min-width: 320px;*/
     margin:0 auto;
 }
 header{
     background-color:#f74ec6;
-    padding:2.08%;
+    /*padding:2.08%;*/
 }
 aside{
     width:30%;
     float:right;
-    /*margin:2.08%;*/
-    padding:2.08%;
+    /*margin:2.08%;
+    padding:2.08%;*/
 }
 main{
     background-color: white;
     float: left;
 	width:70%;
-    padding:2.08%;
+    /*padding:2.08%;*/
 }
 img{
 	width:100%;
 	max-width:100%;
 }
 aside p{
-	margin:1em 1.8em;
+	/*margin:1em 1.8em;*/
 }
 footer{
     background-color: #26211D;
     clear: both;
     padding:2.08%;
-	color:#D0C1B1;
-	text-align:center;
-	
 }
 
 /*quickie reset of margins around headings and p*/
 p, h1, h2, h3{
-  margin: 2.08% 0;
+  /*margin: 2.08% 0;*/
 }
 
 /*typography*/
@@ -67,7 +64,7 @@ h1{
 	font-family:"Fjalla One", Tahoma, Geneva, sans-serif;
 	font-weight:400;
 	letter-spacing: 0.05em;
-	font-size:3em; /*48px /16px*/
+	font-size:3em;
 	
 }
 h2{
