@@ -1,0 +1,108 @@
+/* colors
+Oranges (dark to light):
+1: #7D0000;
+2: #C92A00;
+3: #FF6600;
+4: #FF905F;
+5: #FFC392;
+6: #FFDCAB;
+7: #FFF6C5
+8: #FFFFDF
+9: #FFFFF8
+
+light green: #73BE1E;
+dark green: #277200;
+*/
+
+/*Mobile First! */
+html{
+	background-color:#333;
+}
+
+body{
+	/*font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:100%;
+	background-color:#7D0000;
+	max-width: 1000px;
+	margin:0 auto;
+	color:white;
+}
+main{
+	display:block;
+	padding:2em;	
+}
+header{
+	font-size: 1.1em;
+    font-weight: normal;
+    letter-spacing: 0.3em;
+    padding: 2em 0 0 2em;
+    text-transform: uppercase;
+}
+
+
+
+@media only screen and (min-width: 480px) {
+  /* 480 =================================================== */
+  body{
+	background-color:#C92A00;
+	
+	}
+}
+
+@media screen and (min-width:480px) and (orientation:landscape){
+/* 480 and landscape =================================================== */
+
+body{
+	background-color:#73BE1E;
+	color:white;
+}
+
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+    body{
+	background-color:#FF6600;
+	
+	}
+}
+@media only screen and (min-width: 768px) {
+  /* 768 =================================================== */
+    body{
+	background-color:#FF905F;
+	
+	}
+}
+@media only screen and (min-width: 892px) {
+  /* 992 =================================================== */
+    body{
+	background-color:#FFC392;
+	color:#333;
+	
+	}
+}
+@media only screen and (min-width: 1000px) {
+  /* 1382 =================================================== */
+  body {
+    background-color:#FFDCAB;
+
+	
+  }
+}
+/* is this a widescreen?*/
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { 
+body {
+    background-color:#277200;
+	color:white;
+	
+  } }
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 2x =================================================== */
+  body{
+  	font-size:200%;
+  	background-color:white;
+  }
+}
+
