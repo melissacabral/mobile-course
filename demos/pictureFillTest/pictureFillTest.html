@@ -2,8 +2,25 @@
 <html lang="html">
 <head>
 <meta charset="UTF-8">
-<title>testing PictureFill</title>
+<meta name="viewport" content="width=device-width">
+<title>Switching Images with PictureFill</title>
+
 <style>
+html{
+	background:#D9BF9B;
+}
+body{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:100%;
+	margin:2em auto;
+	padding:3em;
+	width:80%;
+	max-width:1080px;
+	background:#FFF;
+}
+h1{
+	color:#3673B3;
+}
 img{
 	max-width:100%;
 }
@@ -12,12 +29,13 @@ img{
 <script src="scripts/picturefill.js"></script>
 </head>
 <body>
+<h1> PictureFill</h1>
+<p> Flexible image Replacement Using PictureFill.js. Learn More about it on <a href="https://github.com/scottjehl/picturefill"> Github</a></p>
 <section>
-
 	<span data-picture data-alt="a tropical beach">
         <span data-src="images/beach_small.jpg"></span>
-        <span data-src="images/beach_med.jpg"     data-media="(min-width: 340px)"></span>
-        <span data-src="images/beach_lrge.jpg"      data-media="(min-width: 800px)"></span>
+        <span data-src="images/beach_med.jpg" data-media="(min-width: 340px)"></span>
+        <span data-src="images/beach_lrge.jpg" data-media="(min-width: 800px)"></span>
         <!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
         <noscript>
             <img src="images/beach_small.jpg" alt="a tropical beach">

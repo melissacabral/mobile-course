@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Flexible Videos</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/video_fitvids.css">
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="jquery.fitvids.js"></script>
+      <script>
+        // Basic FitVids Test
+        $(".video").fitVids();
+      </script>
+
+</head>
+<body class="cf">
+<header>
+<h1> Video Flex <span>with Fitvids.js</span></h1>
+</header>
+
+<nav>
+<ul class="nav nav-list">
+  <li class="active"><i class="icon-home"></i><a href="#"> Home</a></li>
+  <li><i class="icon-book"></i><a href="#"> Library</a></li>
+  <li><i class="icon-pencil"></i><a href="#"> Applications</a></li>
+  <li><i class="icon-cogs"></i><a href="#"> Settings</a></li>
+</ul>
+</nav>
+<main>
+<h2> Making Our Videos Flexible</h2>
+<p>These videos were embedded using <a href="https://github.com/davatron5000/FitVids.js"> fitVids.js</a>, a lightweight, easy-to-use jQuery plugin for fluid width video embeds. The jQuery script supports: Youtube,Vimeo,Blip.tv,Viddler, Kickstarter. You can also add your own custom video player with an optional parameter. Results may vary.</p>
+<article >
+<h2>Your CSS is a mess</h2>
+<b>This talk by Jonathan Snook was held at Smashing Conference 2012 in Freiburg, Germany.</b>
+<p>CSS is easy. You take some selectors, add some properties, maybe a dash of media queries and presto, you have a beautiful site. And yet, as projects change and as teams grow, we begin to see the frustration build with increasingly complex selectors and overuse of !important. This session will look at common problems and solutions that will make your CSS (and your projects) easier to manage and easier to scale.</p>
+<p>More about Smashing Conference:<a href="http://www.smashingconf.com">smashingconf.com</a></p>
+<div class="video">
+
+<iframe src="http://player.vimeo.com/video/61755493?title=0&amp;byline=0&amp;portrait=0&amp;color=EB6933" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> </div>
+<p><a href="http://vimeo.com/61755493">Your CSS is a Mess</a> from <a href="http://vimeo.com/marcthiele">marc thiele</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+</article>
+
+<article >
+<h2>How To Build Your personal brand</h2>
+<b>This is part of the YouTube Web Design channel</b>
+<div class="video second">
+<iframe width="560" height="315" src="http://www.youtube.com/embed/iJlJNaaOswA" frameborder="0" allowfullscreen></iframe>
+</div>
+</article>
+</main>
+
+<aside>
+<article>
+<h2>FitVids.js</h2>
+<p>Introducing the Plugin</p>
+<b>A lightweight, easy-to-use jQuery plugin for fluid width video embeds.</b>
+
+<p>FitVids automates the Intrinsic Ratio Method by Thierry Koblentz to achieve fluid width videos in your responsive web design.</p>
+<h3>How Do I Use It?</h3>
+<p>Include jQuery 1.7+ and FitVids.js in your layout and target your videos container with fitVids().
+<code>&lt;script src="path/to/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="path/to/jquery.fitvids.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+  $(document).ready(function(){
+    // Target your .container, .wrapper, .post, etc.
+    $("#thing-with-videos").fitVids();
+  });
+&lt;/script&gt;</code>
+
+This will wrap each video in a div.fluid-width-video-wrapper and apply the necessary CSS. After the initial Javascript call, it's all percentage-based CSS magic.</p>
+<p>Available for download on <a href="https://github.com/davatron5000/FitVids.js">GitHub</a></p>
+
+</article>
+
+</aside>
+<footer>
+<p><small>@2013 Platt College</small></p>
+<address> Have question about this page? Contact the<a href="mailto:tiziana@platt.edu"> webmistress<i class="icon-envelope"></i></a></address>
+</footer>
+</body>
+</html>
