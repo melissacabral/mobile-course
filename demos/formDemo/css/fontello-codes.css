@@ -1,0 +1,6 @@
+
+.icon-user:before { content: '\e801'; } /* '' */
+.icon-location:before { content: '\e803'; } /* '' */
+.icon-mobile:before { content: '\e800'; } /* '' */
+.icon-mail:before { content: '\ea'; } /* 'ê' */
+.icon-url:before { content: '\e804'; } /* '' */
