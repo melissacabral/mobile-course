@@ -71,21 +71,6 @@ header h1{
 #banner{
 	min-height:100px;
 }
-
-li{
-	border-bottom:#600 1px solid;
-}
-li:last-child{
-	border-bottom:none;
-}
-
-a{
-	display: block;
-	padding: 0.5em;
-	
-}
-
-
 /*basic typography*/
 h1{
 	color:white;
@@ -99,9 +84,45 @@ a{
 }
 a:hover{
 	text-decoration:underline;
-	background:#600;
 }
+/* 
+== toggle nav 
+http://codepen.io/bradfrost/pen/sHvaz 
+*/
 
+a.menu-link {
+	float: right;
+	display: block;
+	padding: 1em;
+}
+nav[role=navigation] {
+	clear: both;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+}
+nav[role=navigation].active {
+	max-height: 15em;
+}
+nav[role=navigation] ul {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #808080;
+}
+nav[role=navigation] li a {
+	display: block;
+	padding: 0.8em;
+	border-bottom: 1px solid #808080;
+}
+/*
+end nav
+*/
 
 /*tablet styles*/
 @media only screen and (min-width:480px) {
