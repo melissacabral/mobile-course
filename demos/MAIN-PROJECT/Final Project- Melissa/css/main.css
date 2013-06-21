@@ -12,21 +12,21 @@
 
 @font-face {
 	font-family: 'FengardoNeueRegular';
-	src: url('../fonts/FengardoNeue_Regular-webfont.eot');
-	src: url('../fonts/FengardoNeue_Regular-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/FengardoNeue_Regular-webfont.woff') format('woff'),
-	url('../fonts/FengardoNeue_Regular-webfont.ttf') format('truetype'),
-	url('../fonts/FengardoNeue_Regular-webfont.svg#FengardoNeueRegular') format('svg');
+	src: url('../font/FengardoNeue_Regular-webfont.eot');
+	src: url('../font/FengardoNeue_Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/FengardoNeue_Regular-webfont.woff') format('woff'),
+	url('../font/FengardoNeue_Regular-webfont.ttf') format('truetype'),
+	url('../font/FengardoNeue_Regular-webfont.svg#FengardoNeueRegular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'FengardoNeueBlack';
-	src: url('../fonts/FengardoNeue_Black-webfont.eot');
-	src: url('../fonts/FengardoNeue_Black-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../fonts/FengardoNeue_Black-webfont.woff') format('woff'),
-	url('../fonts/FengardoNeue_Black-webfont.ttf') format('truetype'),
-	url('../fonts/FengardoNeue_Black-webfont.svg#FengardoNeueBlack') format('svg');
+	src: url('../font/FengardoNeue_Black-webfont.eot');
+	src: url('../font/FengardoNeue_Black-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../font/FengardoNeue_Black-webfont.woff') format('woff'),
+	url('../font/FengardoNeue_Black-webfont.ttf') format('truetype'),
+	url('../font/FengardoNeue_Black-webfont.svg#FengardoNeueBlack') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -125,18 +125,7 @@ body {
 h1, h2, h3, h4{
 	font-family: FengardoNeueRegular, Tahoma, Verdana, Segoe, sans-serif;
 }
-/* 
-== Basic Nav
-*/
-#mainNav h2, #mainNav #menuToggle {
-	display: none;
-}
-#mainNav{
-	background-color:#64384f;
-}
-nav ul {
-	list-style: none;
-}
+
 
 /*
 == header styles
@@ -175,7 +164,47 @@ header h2 {
 }
 /* 
 == nav styles
+
+scripts/menu-toggle.js works alongside this for the  animation
 */
+
+a.menu-link { /*  toggle menu button */
+	float: right;
+	display: block;
+	padding: 1em;
+	background-color:#64384f; /* dk purple */
+	color:white;
+	width:100%;
+	
+}
+nav[role=navigation] {
+	background-color:#64384f;  /* dk purple */
+	clear: both;
+	-webkit-transition: all 0.3s ease-out;  
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.js nav[role=navigation] {
+	overflow: hidden;
+	max-height: 0;
+}
+nav[role=navigation].active {
+	max-height: 15em;
+}
+nav[role=navigation] ul {
+	margin: 0;
+	padding: 0;
+	border-top: 1px solid #808080;
+}
+nav[role=navigation] li a {
+	display: block;
+	padding: 0.8em;
+	border-bottom: 1px solid #808080;
+}
+
+/*end new better menu*/
 #mainNav {
 	width: 100%;
 }
@@ -471,15 +500,24 @@ aside .product-tour {
 aside .product-tour h2 {
 	border: none;
 }
-aside .product-tour ul {
-	display: none; /* hide the list immediately on small screens. JS will put a <select> in its place */
-}
+/* Tiny Nav in the product tour  from BradFrost*/
+
 .product-tour select {
-	width: 80%;
-	margin-left: 10%;
-	font-size:1.5em;
-	margin-bottom: 1.2em;
+	width: 100%;
 }
+.tour-list {
+	overflow: hidden;
+}
+.tour-list li {
+	float: left;
+	margin-right: 1em;
+}
+ .tinynav { display: block }
+    .tour-list { display: none }
+
+
+
+/* */
 aside .developer-blog article{
 	width: 100%;
 	padding:.5em 5% ;
@@ -536,6 +574,28 @@ aside .developer-blog h3{
 	}
 	
 	/*nav styles*/
+	/* 
+	== toggle nav  turns back into normal horizontal nav
+	http://codepen.io/bradfrost/pen/sHvaz 
+	*/
+	a.menu-link {
+		display: none;
+	}
+	.js nav[role=navigation] {
+		max-height: none;
+	}
+	nav[role=navigation] ul {
+		margin: 0 0 0 -0.25em;
+		border: 0;
+	}
+
+	nav[role=navigation]  li {
+		display: inline-block;
+		margin: 0 0.25em;
+	}
+	nav[role=navigation] li a {
+		border: 0;
+	}
 	#mainNav {
 		width: 100%;		
 		padding: 0;
@@ -591,7 +651,7 @@ aside .developer-blog h3{
 	}
 	#demo-video h1, #demo-video p{
 	display: block; /* these elements are hidden and reappear once tablet size is achieved */
-}
+	}
 
 	article h2 {
 		font-size: 2.4em;
@@ -719,7 +779,8 @@ aside .developer-blog h3{
 		border-top: 2px solid rgb(76, 67, 65);
 		padding-top: .8em;
 	}
-
+	/* Tiny Nav goes away, list returns */
+	.tinynav { display: none }
 	aside .product-tour h2 {
 		float: left;
 		margin-right: 1em;
@@ -735,12 +796,7 @@ aside .developer-blog h3{
 	aside .product-tour ul {
 		display: block;
 	}
-
-	.product-tour select {
-		float: left;
-		margin-top: 1em;
-		width: 200px;
-	}
+	
 
 	.contest img {
 		float: left;

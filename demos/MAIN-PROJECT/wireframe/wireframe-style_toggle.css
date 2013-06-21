@@ -42,6 +42,9 @@ header, header *{
 
 
 }
+nav, nav *, .menu-link{
+	background-color:rgba(50,0,50, .3); /* purple */
+}
 main, main *{
 	background-color:rgba(0,100,50,.2); /* aqua */
 }

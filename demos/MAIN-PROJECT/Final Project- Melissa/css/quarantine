@@ -3,6 +3,8 @@
 /*desktop styles*/
 @media only screen and (min-width:769px) {
 
+.tinynav { display: none }
+
 	body {
 		width: 90%;
 		margin: 0 auto;

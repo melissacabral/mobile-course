@@ -21,12 +21,12 @@
      <h1><a href="index.html">MetaMorph</a></h1>
      <h2>Your Visual Life</h2>
 </header>
-<nav id="mainNav" role="navigation" class="cf">
-    
-     <ul class="topMenu expand">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li><a href="gallery.html">Galleries</a> </li>
-          <li><a href="contact.html">Contact</a></li>          
+<a href="#menu" class="menu-link"><i class="icon-chevron-sign-right"></i> Menu</a>
+<nav id="menu" role="navigation" class="cf">
+     <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Products</a></li>
      </ul>
 </nav>
 <main role="main" class="cf">
@@ -60,7 +60,7 @@
      <aside role="complementary">
           <section class="product-tour">
                <h2>Product Tour</h2>
-               <ul>
+               <ul class="tour-list">
                     <li> <a href="#"><i class="icon-beer"></i> Free Forever</a> </li>
                     <li> <a href="#"><i class="icon-cloud-upload"></i> Sync to the Cloud</a> </li>
                     <li> <a href="#"><i class="icon-magic"></i> Magical Powers</a> </li>
@@ -109,7 +109,7 @@ Modernizr.load([
 {
    load: [  
    'http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js',
-   'scripts/desolve.js',
+   'scripts/menu-toggle.js', 
    'scripts/fluid-video.js'
    ]
 },
@@ -117,7 +117,7 @@ Modernizr.load([
      // test for media query support, if not load respond.js
      test : Modernizr.mq('only all'),
     // If not, load the respond.js file
-    nope : 'scripts/respond.js' 
+    nope : 'scripts/respond.min.js' 
 }
 ]); 
 </script>
