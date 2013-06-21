@@ -174,11 +174,11 @@ function toggleSelect() {
 	//convert list menus to select elements
 	function smScreen() {
 		//find the ul you wish to change
-		$('nav.archives ul').each(function() {
+		$('.product-tour ul').each(function() {
 			//add a select element
 			var $select = $('<select />');
 			//add an initial choice for the select element and assign its attributes
-			var $initial = $('<option>Choose a gallery</option>');
+			var $initial = $('<option>Choose a Tour</option>');
 			$initial.attr({
 				value: '#',
 				selected: 'selected'
@@ -208,7 +208,7 @@ function toggleSelect() {
 	//convert select elements to list menus
 	function lgScreen() {
 		//target the select menu
-	   $('nav.archives select').each(function() {
+	   $('.product-tour select').each(function() {
 				//remove the initial selection option
 				$(this).find(':first-child').remove();
 				//create an unordered list
