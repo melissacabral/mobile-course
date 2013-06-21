@@ -9,7 +9,6 @@
 ==Fonts
 */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-
 @font-face {
 	font-family: 'FengardoNeueRegular';
 	src: url('../font/FengardoNeue_Regular-webfont.eot');
@@ -30,7 +29,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 /*limited reset*/
 html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
 	margin: 0;
@@ -54,11 +52,9 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 	content:"";
 	display:table;
 }
-
 .cf:after {
 	clear:both;
 }
-
 .cf {
 	zoom:1;
 }
@@ -67,36 +63,35 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 */
 a {
 	text-decoration: none;
-	color: #667F6A;
-	border-bottom: 1px dotted #667F6A;
+	color: #462445; /* dk purple */
 }
-
 a:hover, a:focus {
-	color: #7B798F;
-	border-bottom: 1px solid #7B798F;
+	outline: none;
+	background-color:rgba(100,56,79,.3); /* med purple - transparent*/
 }
-
 a img {
 	border: none;
 	outline: 0;
 }
-
 .preview a {
 	display: block;
 	height:100%;
 }
-
 .preview a:hover, .preview a:focus {
 	border: none;
 }
 a.action{
 	background-color:#eee; /* gray */
-	display:inline-block; 
+	display:block; 
 	-webkit-border-radius: 6px;    
 	font-size:1.2em;
+	text-align: center;
     border-radius: 6px;
     color:#000;
     border-bottom:solid 1px #ccc;
+    padding:.5em 1em;
+    width:90%;
+    margin:0 auto;
 }
 .action.primary{
 	background-color: #6bb6a1; /* turquoise */
@@ -126,7 +121,6 @@ h1, h2, h3, h4{
 	font-family: FengardoNeueRegular, Tahoma, Verdana, Segoe, sans-serif;
 }
 
-
 /*
 == header styles
 */
@@ -148,7 +142,7 @@ header h1 {
 header h1 a{
 	text-indent: -99999em;
 	display: block;
-	height: 100%;
+	min-height: 60px;
 }
 header a {
 	text-decoration: none;
@@ -157,100 +151,78 @@ header a {
 }
 header a:hover {
 	border: none;
-	color: white;
+	background-color: transparent;
 }
 header h2 {
 	display: none;
 }
-/* 
+/*
 == nav styles
-
-scripts/menu-toggle.js works alongside this for the  animation
+@source http://codepen.io/bradfrost/pen/sHvaz
+@see scripts/main.js 
 */
 
 a.menu-link { /*  toggle menu button */
-	float: right;
 	display: block;
 	padding: 1em;
 	background-color:#64384f; /* dk purple */
 	color:white;
 	width:100%;
+	border: none;
 	
 }
-nav[role=navigation] {
+#menu {
 	background-color:#64384f;  /* dk purple */
 	clear: both;
-	-webkit-transition: all 0.3s ease-out;  
+	-webkit-transition: all 0.3s ease-out;  /* CSS enhancement - animation */ 
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
 	-o-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
-.js nav[role=navigation] {
+.js #menu {
 	overflow: hidden;
 	max-height: 0;
 }
-nav[role=navigation].active {
+#menu.active {
 	max-height: 15em;
 }
-nav[role=navigation] ul {
+#menu ul {
 	margin: 0;
 	padding: 0;
-	border-top: 1px solid #808080;
+	list-style-type: none;
 }
-nav[role=navigation] li a {
-	display: block;
-	padding: 0.8em;
-	border-bottom: 1px solid #808080;
-}
-
-/*end new better menu*/
-#mainNav {
-	width: 100%;
-}
-
-#mainNav a, #mainNav h3 {
+#menu li a {	
 	text-transform: uppercase;
 	display: block;
 	color: white;
 	border: none;
 	font-size: 1.2em;
-	text-align: left;
-	color: white;	
-	display: block;
 	margin-bottom: 1px;
 	padding-left: 1em;
 	line-height: 2em;
 	text-transform: uppercase;
 	cursor: pointer;
 }
-#mainNav a:hover{
+
+/*end new better menu*/
+
+
+
+#menu a:hover,
+#menu a:focus{
 		background-color: #b0606d;
 	}
-#mainNav a.current {
+#menu a.current {
 	color: rgb(123, 121, 143);
 	cursor: default;
 	color: rgb(237, 228, 214);
 }
-#mainNav {
+#menu {
 	width: auto;
 	margin: 0;
 	margin-bottom: 1em;
-	
 	overflow: hidden
-}
-
-.topMenu {
-	max-height: 0;
-	
-}
-.topMenu.expand {
-	max-height: 900em;
-	visibility: visible;
-}
-#mainNav span.indicator {
-	position: absolute;
-	right: 1em;
 }
 
 /*misson styles*/
@@ -268,11 +240,7 @@ nav[role=navigation] li a {
 	margin-bottom: .5em;
 	
 }
-.mission .action{
-	text-align: center;
-	width:90%;
-	padding:.5em 1em;
-}
+
 
 /*
 == Fluid Images
@@ -284,24 +252,24 @@ img{
 }
 
 /*
-== article styles
+== page-content styles
 */
 .page-content article{
 	width:90%;
 	margin:0 auto;
 }
 
-article section {
+.feature {
 	
 	margin: 2em 0;
 }
 
-article h1 {
+#demo-video h1 {
 	font-size: 1.8em;
 	
 }
 
-article h2 a {
+.feature h2 a {
 	color: rgb(76, 67, 65);
 	border: none;
 }
@@ -319,14 +287,14 @@ article h2 a:hover {
 	border: none;
 }
 
-article section {
+.feature {
 	margin-bottom: 1.6em;
 	overflow: hidden;
 	position: relative;
-	padding-bottom: 20px;
+
 }
 
-article h2 {
+.feature h2 {
 	font-size: 1.6em;
 	margin-bottom: 0;
 }
@@ -491,33 +459,14 @@ aside section {
 
 aside h2 {
 	font-size: 1.4em;
-	padding: 1em 0 .5em;
+	margin-bottom:1em;
 	text-align:center;
+	border: none;
 }
 aside .product-tour {
 	background-color: #ec6b55;
+	padding: 1.5em 5%;
 }
-aside .product-tour h2 {
-	border: none;
-}
-/* Tiny Nav in the product tour  from BradFrost*/
-
-.product-tour select {
-	width: 100%;
-}
-.tour-list {
-	overflow: hidden;
-}
-.tour-list li {
-	float: left;
-	margin-right: 1em;
-}
- .tinynav { display: block }
-    .tour-list { display: none }
-
-
-
-/* */
 aside .developer-blog article{
 	width: 100%;
 	padding:.5em 5% ;
@@ -526,12 +475,32 @@ aside .developer-blog article{
 aside .developer-blog h2{
 	background-color: #6ab5a0;
 	text-align: center;
+	margin: 0;
+	padding-top:1em;
 }
 aside .developer-blog h3{
 	background-color:#4ba084;
 	max-width:400px;
 	margin:0 auto;
 	padding:.25em;
+}
+
+/* 
+ == Tiny Nav 
+ <select> replaces submenu   
+ @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
+ @see scripts/main.js 
+*/
+
+.product-tour select {
+	width: 100%;
+	font-size:1.3em; /* make it big and easy to tap */
+}
+.tinynav { 
+	display: block
+}
+.tour-list { 
+	display: none 
 }
 
 
@@ -553,59 +522,37 @@ aside .developer-blog h3{
 	font-size: 1.25em;
 }
 
-/*tablet styles*/
+/* 
+== tablet and large phone styles
+*/
 @media only screen and (min-width:480px) { 
-	/* make the menu come back */
-	.topMenu {
-		max-height: auto;
-	}
-	.topMenu.expand {
-		max-height: 0;
-		visibility: hidden; /* hide the expand button */
-	}
-	#mainNav li {
-		float: left; /* menu items sit side by side */
-	}
-	body {
-		width: 90%;
-		margin: 0 auto;
-		min-width: 500px; /* TODO:  why is this necessary for the JS menu toggle to work?? */
-		
-	}
 	
-	/*nav styles*/
+	
+	/*
+	== nav styles
+	*/	
+	
 	/* 
 	== toggle nav  turns back into normal horizontal nav
-	http://codepen.io/bradfrost/pen/sHvaz 
+	@source http://codepen.io/bradfrost/pen/sHvaz 
+	@see /scripts/main.js
 	*/
 	a.menu-link {
 		display: none;
 	}
-	.js nav[role=navigation] {
+	.js #menu {
 		max-height: none;
 	}
-	nav[role=navigation] ul {
-		margin: 0 0 0 -0.25em;
-		border: 0;
+	#menu  li {
+		float:left; 		
 	}
-
-	nav[role=navigation]  li {
-		display: inline-block;
-		margin: 0 0.25em;
-	}
-	nav[role=navigation] li a {
-		border: 0;
-	}
-	#mainNav {
+	#menu {
 		width: 100%;		
 		padding: 0;
 		margin-bottom:0;
 	}
-	.topMenu {		
-		margin: 0 auto;
-	}
+	#menu li a {
 
-	#mainNav a {
 		font-size: 1em;
 		text-align: center;
 		cursor: pointer;
@@ -637,15 +584,17 @@ aside .developer-blog h3{
 	}
 
 
-	/* article styles */ /* TODO: figure out why these are collapsing into the video strangely */	
-	article section {		
+	/* ==page-content styles */	
+	
+	.feature {		
 		overflow: hidden;
 		position: relative;
-		padding: .8em;
+		padding: 1em 0;
 		clear: both;
+		min-height: 10em;
 	}
 
-	article .video-box{
+	.video-box{
 		width:55%;
 		float:right;
 	}
@@ -654,7 +603,8 @@ aside .developer-blog h3{
 	}
 
 	article h2 {
-		font-size: 2.4em;
+		font-size: 2em;
+		line-height: 1.1em;
 		float: left;
 		clear: left;
 		margin-bottom: 0;
@@ -687,7 +637,7 @@ aside .developer-blog h3{
 	}
 
 	
-	/*gallery styles*/
+	/*gallery styles
 	#gallery h1 {
 		font: 6.2em OstrichSansBold;
 		font-weight: normal;
@@ -695,10 +645,6 @@ aside .developer-blog h3{
 		text-transform: uppercase;
 		color: rgba(123, 121, 143,.8)
 	}
-
-
-
-
 	.intro p {
 		font-size: .8em;
 		margin: 0 0 1em;
@@ -706,8 +652,7 @@ aside .developer-blog h3{
 		clear: none;
 		width: auto;
 	}
-
-	.intro {
+		.intro {
 		-moz-column-count: 2;
 		-moz-column-gap: .5em;
 		-webkit-column-count: 2;
@@ -747,7 +692,7 @@ aside .developer-blog h3{
 		z-index: 500;
 	}
 
-	
+	*/
 
 	/*form styles*/
 	fieldset {
@@ -763,81 +708,136 @@ aside .developer-blog h3{
 		width: auto;
 	}
 
-	/*aside styles*/
-	aside {
-		width: 92.2%;
-		padding: 0 3.9%;
-	}
+	/*
+	==aside styles
+	*/
 
-	aside section {
-		clear: both;
-	}
-
-	aside h2 {
-		font-size: 1.2em;
-		margin-bottom: 1em;
-		border-top: 2px solid rgb(76, 67, 65);
-		padding-top: .8em;
-	}
 	/* Tiny Nav goes away, list returns */
 	.tinynav { display: none }
-	aside .product-tour h2 {
-		float: left;
-		margin-right: 1em;
-		font-size: 1.6em;
-		border: none;
-		padding-top: 0;
-	}
-
+	
+	aside section{
+		float:left;
+		clear: none;
+	}	
 	aside .product-tour {
+		width: 45%;
+		background-color: transparent;
 		margin-bottom: 2em;
+		padding-left:0;
+		padding-right: 0;
 	}
-
+	aside .developer-blog{
+		width:55%;
+	}
 	aside .product-tour ul {
 		display: block;
+		list-style-type: none;
 	}
-	
-
-	.contest img {
-		float: left;
-		margin-bottom: 1em;
-		margin-right: 1em;
+	aside .product-tour li{		
+		float:none;
+		background: #e4e4e4; /* Old browsers */
+		background: -moz-linear-gradient(top,  #e4e4e4 0%, #dddddd 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e4e4e4), color-stop(100%,#dddddd)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #e4e4e4 0%,#dddddd 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #e4e4e4 0%,#dddddd 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e4e4e4', endColorstr='#dddddd',GradientType=0 ); /* IE6-9 */
 	}
-
-	.contest p {
-		font-size: .9em;
-		margin-bottom: 1.5em;
-		width: 85%;
-		line-height: 2;
-	}
-
-	.enter a {
-		clear: both;
+	aside .product-tour a{
+		padding:1em;
 		display: block;
 	}
 
-	/*footer styles*/
-	#pageFooter {
+	/* ==footer styles*/
+	#page-footer {
 		clear:both;
-		overflow:hidden;
-		height: 150px;
 	}
-
-	#pageFooter form {
-		float: left;
-		margin-left: 3.9%;
-		display: inline;
+	#page-footer section{
+		width:50%;
+		float:left;
 	}
-
-	.notice {
-		width: 300px;
+	#page-footer .action{
+		clear:both;
+		width:50%;
+		float:right;
+		margin-right:1em;
+		font-size:.8em;
 	}
-
-	#pageFooter p {
-		float: right;
-		clear: right;
-		margin-right: 3.9%;
-		text-align: right;
+	#page-footer h2{
+		background-color: rgba(0,0,0,.2);
+		padding:.25em;
+		margin-bottom:.25em;
 	}
 }
+/* ==desktop styles*/
+@media only screen and (min-width:800px) {
 
+	body {
+		max-width: 1200px; /* prevent it from getting too wide to read comfortably */
+	}
+	/*header styles*/
+	header {
+		min-height: 96px;
+	}
+	header h1 {		
+		background-position: left top;
+		margin-top:1em;
+	}
+
+
+	/*
+	==mission styles
+	@TODO - clean up the math or add JS for the 'stretchy header'
+	*/
+	.mission {
+		min-height: 200px;
+		background: url(../images/gallery_banner.jpg) no-repeat;
+		margin-bottom: 4em;
+		background-position: top left;
+		background-size:100%; /* make it stretchy*/
+		background-color:#64384f;
+		padding-top:1px;
+	}
+
+	.mission h1 {
+		padding:0;
+		font-size: 2.2em;
+		color: #fff;
+		text-align: left;
+		letter-spacing:.1em;
+		width: auto;
+		margin:10% 0 2% 60%;
+	}
+	.mission .action{
+		margin:0 0 5% 60%;
+
+	}	
+	/*
+	==basic page layout - float the aside next to the content
+	*/
+	.page-content { /* wider column */
+		float: left; 
+		width: 71%;
+		margin:0 2%;
+	}
+	aside {
+		float: right;
+		width: 25%;
+		padding: 0;
+		margin:0;
+	}
+	/* make the sections of the aside sit one above the other */
+	aside .product-tour, aside .developer-blog{
+		width: 100%;
+		float:none;
+	}
+	#page-footer section{
+		width:33.3333%;
+	}
+	#page-footer .action{
+		width:auto;
+	}
+
+
+}
