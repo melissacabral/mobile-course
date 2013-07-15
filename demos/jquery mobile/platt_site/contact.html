@@ -1,0 +1,125 @@
+<title>PCSD Frequently Asked Questions</title>
+<div id="faqPage" data-role="page" data-title="PCSD FAQ" >
+	<div data-role="header">
+		<h1>Frequently Asked Questions</h1>
+		<a href="main.html" data-rel="back" data-icon="back"  data-direction="reverse">Back</a>  
+		<a href="main.html" data-icon="home" data-iconpos="notext" >Home</a>
+
+
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="catalog.html"  data-icon="grid">Courses</a></li>
+				<li><a href="faq.html" data-icon="info">F.A.Q.</a></li>
+				<li><a href="contact.html" data-icon="forward" class="ui-btn-active ui-state-persist">Contact Platt</a></li>
+			</ul>
+		</div><!-- /navbar -->
+	</div><!-- /header -->
+	
+	<div data-role="content">
+		<h2>Contact by Department</h2>
+		<ul data-role="listview" data-inset="true" data-theme="">
+			<li><a href="#">Admissions</a>
+				<ul>
+					<li><a href="mailto:admissions@platt.edu">admissions@platt.edu</a></li>
+					<li><a href="tel:18001234567">1-800-123-4567</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Career Services</a>
+				<ul>
+					<li><a href="mailto:careers@platt.edu">careers@platt.edu</a></li>
+					<li><a href="tel:18001234567">1-800-123-4567</a></li>
+				</ul>
+			</li>
+			<li><a href="#">Financial Aid</a>
+				<ul>
+					<li><a href="mailto:financialaid@platt.edu">financialaid@platt.edu</a></li>
+					<li><a href="tel:18001234567">1-800-123-4567</a></li>
+				</ul>
+			</li>			
+		</ul>
+		<h2>General Inquiry</h2>
+		<p>If you have a general question about our programs, and would like more information, complete the form below:</p>
+
+		<form action="path/to/parser.php" method="post"> 
+			<div data-role="fieldcontain">
+				<label for="name">Your Name:</label>
+				<input type="text" name="name" id="name" value=""  required />
+			</div>
+
+			<div data-role="fieldcontain">
+				<label for="textarea">Message or Question:</label>
+				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+			</div>
+
+
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>Areas of study you are interested in (choose all that apply):</legend>
+					<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+					<label for="checkbox-1a">Graphic Design</label>
+
+					<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+					<label for="checkbox-2a">Web Design</label>
+
+					<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+					<label for="checkbox-3a">3d Animation</label>
+
+					<input type="checkbox" name="checkbox-4a" id="checkbox-4a" class="custom" />
+					<label for="checkbox-4a">Video Production</label>
+				</fieldset>
+			</div>
+
+			<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup">
+					<legend>You are:</legend>
+					<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+					<label for="radio-choice-1">A Current Student</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+					<label for="radio-choice-2">A Prospective Student</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+					<label for="radio-choice-3">Alumni</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-4" value="choice-4"  />
+					<label for="radio-choice-4">An Educator</label>
+				</fieldset>
+			</div>			
+
+			<div data-role="fieldcontain">
+				<label for="select-choice-a" class="select">What's the best way to get in touch with you?</label>
+				<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+					<option>Choose one</option>
+					<option value="email">Email</option>
+					<option value="txt">Text message</option>
+					<option value="call">Phone Call</option>
+					<option value="snailmail">Snail Mail</option>
+				</select>
+		
+				<div class="email contextual ui-hidden-accessible">
+					<label for="name">Email:</label>
+					<input type="email" name="email" id="email" value=""  />
+				</div>
+				<div  class="phone contextual ui-hidden-accessible">
+					<label for="name">Phone Number:</label>
+					<input type="tel" name="phone" id="phone" value=""  />
+				</div>
+				<div class="address contextual ui-hidden-accessible">
+					<label for="name">Address:</label>
+					<textarea name="address" id="address"></textarea>
+				</div>
+			</div>
+
+			
+			<button type="submit" data-theme="b">Submit</button>
+
+		</form>
+
+
+	</div>
+	<div data-role="footer">
+		stuff
+	</div><!-- /footer -->
+
+<script src="js/custom.js" type="text/javascript"></script>
+</div><!-- /page -->

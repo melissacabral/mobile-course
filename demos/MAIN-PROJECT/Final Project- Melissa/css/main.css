@@ -9,6 +9,7 @@
 ==Fonts
 */
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
 @font-face {
 	font-family: 'FengardoNeueRegular';
 	src: url('../font/FengardoNeue_Regular-webfont.eot');
@@ -80,20 +81,21 @@ a img {
 .preview a:hover, .preview a:focus {
 	border: none;
 }
-a.action{
-	background-color:#eee; /* gray */
+a.action, input[type=submit], input[type=button], button{
+	background-color:#ddd; /* gray */
 	display:block; 
 	-webkit-border-radius: 6px;    
+	border-radius: 6px;
 	font-size:1.2em;
 	text-align: center;
-    border-radius: 6px;
+    border:none;
     color:#000;
     border-bottom:solid 1px #ccc;
     padding:.5em 1em;
     width:90%;
     margin:0 auto;
 }
-.action.primary{
+.action.primary, input[type=submit]{
 	background-color: #6bb6a1; /* turquoise */
 	color:#fff;
 	border-color:#3a6459;
@@ -230,7 +232,7 @@ a.menu-link { /*  toggle menu button */
 .mission {
 	text-align: center;
 	margin: 0 auto;
-	margin-bottom: 1em;
+	
 }
 
 .mission h1 {
@@ -254,6 +256,9 @@ img{
 /*
 == page-content styles
 */
+.page-content{
+	margin-top: 1em;
+}
 .page-content article{
 	width:90%;
 	margin:0 auto;
@@ -264,7 +269,7 @@ img{
 	margin: 2em 0;
 }
 
-#demo-video h1 {
+.page-content h1 {
 	font-size: 1.8em;
 	
 }
@@ -330,120 +335,108 @@ article .preview {
 /*
 == gallery styles
 */
-#gallery {
-	margin-top: 2em;
-}
-
-#gallery h1 {
-	background: none;
-	padding: 0;
-	border: none;
-	margin: 0;
-}
-
-.intro p {
-	font-size: 1em;
-	margin: 0 0 1em;
-}
-
-#gallery ul, #gallery li {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-#gallery h1 {
-	font: 4em OstrichSansBold;
-	font-weight: normal;
-	font-style: normal;
-	text-transform: uppercase;
-	text-align: center;
-	color: rgb(123, 121, 143);
-}
-
-.intro {
-	margin-bottom: 2em;
-}
-
-.intro p {
-	font-size: .8em;
-	margin: 0 0 1em;
-}
-
-.photos li {
+.image-box{
 	position: relative;
-	float: none;
 }
-
-#gallery .photos a:after {
-	content: attr(title);
-	display: block;
-	width: 90%;
+.image-box img{
+	padding:3%;
+	background-color:#f6f6f6;
+	margin:0 0 1em 0;
+}
+/*caption*/
+.image-box h3{
 	position: absolute;
-	top: 0;
-	left: 5%;
-	line-height: 2em;
-	color: white;
-	text-align: center;
-	background: rgba( 25, 25, 25, .8); 
-	z-index: 500;
+	left: 3%;
+	bottom: 2em;
+	background-color: rgba(0,0,0,.5);
+	color:white;
+	padding:.25em;
 }
-
+/* 
+== contact page
+*/
+.phone{
+	white-space: nowrap;
+}
 
 /*
 == form styles
 */
-input[type=text], input[type=email], input[type=url], textarea {
-	width: 95%;
+
+.page-content form{
+	width:100%;
+	margin:1em 0 3em;
+	font-size:1.2em; /*all form text gets uniformly larger */
+}
+/*larger target area for all inputs*/
+input, textarea, select {
+	width: 100%;
+	max-width: 500px;
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	padding:.5em;
+	font-size: 1em;
+
+}
+select, input[type=submit]{
+	font-family: inherit;
+}
+
+/* check and radio boxes are special, remove the width */
+input[type=checkbox],
+input[type=radio]{
+	width: auto;
+}
+/* on small screens, radios and checkboxes are easier to choose if they are in vertical lists */
+.choice-list{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.choice-list li{
+	background-color: rgba(0,0,0,.1);
+	margin:.5em 0;
+	   
+	border-radius: 2em;
+}
+.choice-list li label{
+	display: block;
+	padding:.3em;
+	margin:0;
 }
 
 fieldset {
-	width: 90%;
+	width: 100%;
 	border: none;
-	background: rgb(237, 228, 214);
+	background: rgba(0,0,0,.05);
 	position: relative;
 	min-width: 250px;
 	padding:1em;
-	margin: 1em 0;
-	-webkit-border-radius: 0 .5em .5em 0;
-	-moz-border-radius: 0 .5em .5em 0;
-	border-radius: 0 .5em .5em 0;
+	margin: 1em 0;	
 }
-fieldset:before {
-	content:attr(title);
+legend{
 	display: block;
-	font: 1.2em Cantarell, Arial, Helvetica, sans-serif;
-	font-weight:bold;
-	border-bottom: 1px solid rgb(76, 67, 65);
-	width: 100%;
+	padding:.25em .5em;
+	background-color:#DDD;
+	color:#white;
+	position:relative;
+	left:-.7em;
+	font-size: 1.1em
 }
-legend {
-	position: absolute;
-	top:0;
-	left: -2000em;
-}
-fieldset p {
-	font: .8em Cantarell, Arial, Helvetica, sans-serif;
-	margin: 1em 0 0;
-	font-style: italic;
-	float: none;
-	width: auto;
-}
-
-label {
+label, .label{
 	display:block;
+	margin: .75em 0 .1em;
 	font-size: 1em;
-	margin: .8em 0 0;
+	clear: both;
 }
 
-input[type="submit"] {
-	display:block;
-	margin: 1em 0;
+input[type=radio] + label,
+input[type=checkbox] + label{
+	display:inline;
+	padding-right:1em;
 }
 
 
-.inline {
-	display: inline;
-}
+
 
 /*
 == aside styles
@@ -563,7 +556,6 @@ aside .developer-blog h3{
 	.mission {
 		background: url(../images/sm_skyline.jpg) no-repeat;
 		background-position: top center;
-		margin-bottom: 3em;
 		min-height: 247px;
 	}
 
@@ -585,7 +577,9 @@ aside .developer-blog h3{
 
 
 	/* ==page-content styles */	
-	
+	.page-content{
+		margin-top: 3em;
+	}
 	.feature {		
 		overflow: hidden;
 		position: relative;
@@ -610,8 +604,11 @@ aside .developer-blog h3{
 		margin-bottom: 0;
 		width: 40%;
 	}
+	.page-content p{
+		margin:.5em 0;
+	}
 
-	article p {
+	#demo-video p {
 		font-size: 1em;
 		margin: 0;
 		float: left;
@@ -637,75 +634,19 @@ aside .developer-blog h3{
 	}
 
 	
-	/*gallery styles
-	#gallery h1 {
-		font: 6.2em OstrichSansBold;
-		font-weight: normal;
-		font-style: normal;
-		text-transform: uppercase;
-		color: rgba(123, 121, 143,.8)
-	}
-	.intro p {
-		font-size: .8em;
-		margin: 0 0 1em;
-		float: none;
-		clear: none;
-		width: auto;
-	}
-		.intro {
-		-moz-column-count: 2;
-		-moz-column-gap: .5em;
-		-webkit-column-count: 2;
-		-webkit-column-gap: .5em;
-		column-count: 2;
-		column-gap: .5em;
-		margin-bottom: 2em;
+	/* ==gallery styles*/
+	.image-box{
+		width:48%;
+		margin-right:2%;
+		float:left;
 	}
 
-	.photos {
-		-moz-column-count: 2;
-		-moz-column-gap: .5em;
-		-webkit-column-count: 2;
-		-webkit-column-gap: .5em;
-		column-count: 2;
-		column-gap: .5em;
-		margin-bottom: 2em;
-	}
-
-	
-	.photos li {
-		position: relative;
-		float: none;
-	}
-
-	#gallery .photos a:after {
-		content: attr(title);
-		display: block;
-		width: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		line-height: 2em;
-		color: white;
-		text-align: center;
-		background: rgba( 25, 25, 25, .8);
-		z-index: 500;
-	}
-
-	*/
-
-	/*form styles*/
-	fieldset {
-		width: 90%;
-	}
-
-	input[type="text"], input[type="email"], input[type="url"], textarea {
-		width: 95%;
-	}
-
-	fieldset p {
-		float: none;
-		width: auto;
+	/* == form styles*/
+	/* radio/checkbox lists switch to 2-columns*/
+	.choice-list li{
+		width: 48%;
+		float:left;
+		margin-right:2%;
 	}
 
 	/*
@@ -793,7 +734,6 @@ aside .developer-blog h3{
 	.mission {
 		min-height: 200px;
 		background: url(../images/gallery_banner.jpg) no-repeat;
-		margin-bottom: 4em;
 		background-position: top left;
 		background-size:100%; /* make it stretchy*/
 		background-color:#64384f;
@@ -819,7 +759,7 @@ aside .developer-blog h3{
 	.page-content { /* wider column */
 		float: left; 
 		width: 71%;
-		margin:0 2%;
+		margin: 3em 2% 0 ;
 	}
 	aside {
 		float: right;
@@ -838,6 +778,79 @@ aside .developer-blog h3{
 	#page-footer .action{
 		width:auto;
 	}
+	/* 
+	== contact page
+	*/
+	.mobile-emphasis a{
+		background-color: transparent !important;
+		width: auto;
+		color: #000 !important;
+		display: inline;
+		border: none;
+	}
+
+	/*
+	== form styles
+	*/
+	/* make the radio and check box lists sit horizontally*/
+	.page-content form{
+		font-size:1em;
+	}
+	.action, input[type=submit]{
+		margin:1em 0;
+		width: auto;
+		clear: both;
+		float:none;
+	}
+
+	.choice-list li, .choice-list li label{
+		display: inline;
+		width: auto;
+		float: none;
+		clear: none;
+		background-color: transparent;
+	}
+	/* 
+	==gallery styles
+	*/
+	#gallery{
+		width:100%;
+	}
+
+}
+/* ==largest desktop styles*/
+@media only screen and (min-width:1200px) {
+
+	/*
+	== form styles
+	*/
+
+	/*fieldsets - switch to 2 col on wide layout*/
+	#messageInfo{
+		width:60%;
+		float:right;
+		background-color: transparent;
+		padding:3% 0;
+		margin:0 0 1em 0;
+	}
+	#generalInfo{
+		width:34%;
+		float:left;
+		margin: 0 0 1em 0;
+		padding:3%;
+	}
+	#contact-form input[type=submit]{
+		margin-left:40%;
+	} 
+	#contact-form textarea{
+		min-height: 10em;
+	}
+
+	/* == gallery styles */
+	.image-box{
+		width:31%;
+	}
+	
 
 
 }
