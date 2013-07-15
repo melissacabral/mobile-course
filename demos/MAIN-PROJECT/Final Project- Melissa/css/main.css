@@ -735,7 +735,7 @@ aside .developer-blog h3{
 		min-height: 200px;
 		background: url(../images/gallery_banner.jpg) no-repeat;
 		background-position: top left;
-		background-size:100%; /* make it stretchy*/
+		background-size:cover; /* make it stretchy*/
 		background-color:#64384f;
 		padding-top:1px;
 	}
