@@ -26,11 +26,11 @@ body{
 	margin:0 auto;
 	color:white;
 }
-main{
+#main{
 	display:block;
 	padding:2em;	
 }
-header{
+#header{
 	font-size: 1.1em;
     font-weight: normal;
     letter-spacing: 0.3em;
@@ -93,4 +93,3 @@ body {
   	background-color:#a864a9;
   }
 }
-
