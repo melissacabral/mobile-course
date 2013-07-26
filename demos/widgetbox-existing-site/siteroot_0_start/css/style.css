@@ -77,7 +77,7 @@ header .utilities a {
 	text-decoration: none;
 }
 main {
-	margin-top: 480px; /* TODO this will need to change when the absolute positioning changes */
+	padding-top: 480px; /* TODO this will need to change when the absolute positioning changes */
 }
 /* 
 == Call to action Banner
