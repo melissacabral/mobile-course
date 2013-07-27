@@ -1,0 +1,66 @@
+/* Super basic 2 col layout just for browsers that don't understand media queries. keep it simple. no CSS3 either. */
+body{
+	width: 1100px;
+	margin:0 auto;
+}
+.page-content{
+	float: left;
+	width: 70%;
+	overflow: hidden;
+}
+aside{
+	float:right;
+	width:30%;
+	overflow: hidden;
+}
+footer{
+	clear: both;
+}
+#menu{
+	margin:0;
+}
+#menu  li {
+	float:left; 		
+}
+#menu li a{
+	padding:0 1em;
+}
+#demo-video h1, #demo-video p{
+	display: block; 
+}
+.mission {
+	height: 380px;
+	background: url(../images/gallery_banner.jpg) no-repeat;
+	background-size: 80%;
+	background-position: top center;
+	background-size:cover; /* make it stretchy*/
+	background-color:#64384f;
+	padding-top:1px;
+}
+
+.mission h1 {
+	font-weight: bold;
+	line-height:1.1em;		
+	padding:0;
+	font-size: 2.2em;
+	color: #fff;
+	text-align: left;
+	letter-spacing:.1em;
+	width: auto;
+	margin:10% 0 2% 60%;
+}
+.mission .action{
+	margin:0 0 5% 60%;
+	width:260px;
+}
+#page-footer section{
+	width:33%;
+	float:left;
+}
+#page-footer .action{
+	clear:both;
+	width:33%;
+	float:right;
+	margin-right:1em;
+	font-size:.8em;
+}

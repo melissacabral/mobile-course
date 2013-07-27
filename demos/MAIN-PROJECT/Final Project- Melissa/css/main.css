@@ -68,18 +68,12 @@ a {
 }
 a:hover, a:focus {
 	outline: none;
+	border: none;
 	background-color:rgba(100,56,79,.3); /* med purple - transparent*/
 }
 a img {
 	border: none;
 	outline: 0;
-}
-.preview a {
-	display: block;
-	height:100%;
-}
-.preview a:hover, .preview a:focus {
-	border: none;
 }
 a.action, input[type=submit], input[type=button], button{
 	background-color:#ddd; /* gray */
@@ -88,12 +82,12 @@ a.action, input[type=submit], input[type=button], button{
 	border-radius: 6px;
 	font-size:1.2em;
 	text-align: center;
-    border:none;
-    color:#000;
-    border-bottom:solid 1px #ccc;
-    padding:.5em 1em;
-    width:90%;
-    margin:0 auto;
+	border:none;
+	color:#000;
+	border-bottom:solid 1px #ccc;
+	padding:.5em 1em;
+	width:90%;
+	margin:0 auto;
 }
 .action.primary, input[type=submit]{
 	background-color: #6bb6a1; /* turquoise */
@@ -213,8 +207,8 @@ a.menu-link { /*  toggle menu button */
 
 #menu a:hover,
 #menu a:focus{
-		background-color: #b0606d;
-	}
+	background-color: #b0606d;
+}
 #menu a.current {
 	color: rgb(123, 121, 143);
 	cursor: default;
@@ -314,7 +308,10 @@ article p.pubdate {
 	text-transform: uppercase;
 	margin-bottom: 1em;
 }
-
+.preview a {
+	display: block;
+	height:100%;
+}
 article .preview {
 	height: 175px;
 	width:100%;
@@ -395,7 +392,7 @@ input[type=radio]{
 .choice-list li{
 	background-color: rgba(0,0,0,.1);
 	margin:.5em 0;
-	   
+	
 	border-radius: 2em;
 }
 .choice-list li label{
@@ -483,18 +480,18 @@ aside .developer-blog h3{
  <select> replaces submenu   
  @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
  @see scripts/main.js 
-*/
+ */
 
-.product-tour select {
-	width: 100%;
-	font-size:1.3em; /* make it big and easy to tap */
-}
-.tinynav { 
-	display: block
-}
-.tour-list { 
-	display: none 
-}
+ .product-tour select {
+ 	width: 100%;
+ 	font-size:1.3em; /* make it big and easy to tap */
+ }
+ .tinynav { 
+ 	display: block
+ }
+ .tour-list { 
+ 	display: none 
+ }
 
 
 /*
@@ -593,7 +590,7 @@ aside .developer-blog h3{
 		float:right;
 	}
 	#demo-video h1, #demo-video p{
-	display: block; /* these elements are hidden and reappear once tablet size is achieved */
+		display: block; /* these elements are hidden and reappear once tablet size is achieved */
 	}
 
 	article h2 {
@@ -729,7 +726,7 @@ aside .developer-blog h3{
 
 	/*
 	==mission styles
-	@TODO - clean up the math or add JS for the 'stretchy header'
+	
 	*/
 	.mission {
 		min-height: 200px;
