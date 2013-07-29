@@ -2,10 +2,9 @@
 /* CSS Document */
 
 /* COLORS
-
-
 gray: #2E2E30
 red #CC4839
+*/
 
 
 /* fonts*/
@@ -26,17 +25,18 @@ body {
 	margin:0 auto;
 }
 
-table {
+/*table {
     border-collapse: collapse;
     border-spacing: 0;
-}
+}*/
+
 ul{
 	list-style:none;
 }
 
 /* Typography */
 body{
-	font-family:'Gentium Book',Trebuchet MS, serif;
+	font-family:'Gentium Book Basic', serif;
 	color:#666;
 	padding-left:1.5em; /*24px / 16px*/
 }
