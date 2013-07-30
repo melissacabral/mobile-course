@@ -1,0 +1,106 @@
+
+SIMPLE PAGE STRUCTURE
+
+
+<header id="pageHeader" role="banner">
+	<h1>
+	<h2>
+</header>
+
+<nav>
+	<ul><li>...3</li></ul>
+<nav>
+
+<main>
+	<div class="mission cf">
+		<h1>
+		<a>
+	</div>
+
+	<div class="page-content"> 
+		<article id="demo-video" class="cf">
+			<div class="video-box">
+				<iframe>
+			</div>
+		</article>
+
+		<article id="features">         
+            <section class="feature feature-personalize">
+            	<a>
+                  <h2>
+                  <div class="preview"></div>
+                </a>
+            </section>
+
+            <section class="feature feature-friends">
+                    <h2>
+                    	<a>
+                    </h2>
+                    <div class="preview">
+                    	<a>
+                    </div>
+            </section>
+
+            <section class="feature feature-portable">
+                    <h2>
+                    	<a>
+                    </h2>
+                    <div class="preview">
+                    	<a>
+                    </div>
+            </section>
+        </article>
+    </div>
+    
+    <aside role="complementary" class="cf">
+    	<section class="product-tour">
+    		<h2>
+    		<ul><li>...5</li</ul>
+    	</section>
+
+    	<section class="developer-blog">
+               <h2>
+               <article>
+               	<img/>
+                  <h3>100% more kitten</h3>
+               </article>
+               
+               <article> 
+               	<img/>
+                  <h3>Still plenty of puppy</h3>
+               </article>
+        </section>
+    </aside>
+</main>
+
+<footer id="page-footer" class="cf">
+    <section>
+      <h2>
+        <p>Lorem </p>
+     </section>
+
+    <section>
+          <h2>
+          <p>Lorem </p>
+     </section>
+
+     <section>
+          <h2>
+          <p>Lorem </p>
+     </section>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

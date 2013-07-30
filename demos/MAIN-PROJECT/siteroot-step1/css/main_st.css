@@ -1,0 +1,369 @@
+@charset "UTF-8";
+/* color palette
+#462445	=>	Dark Purple
+#64384f	=>	Medium Purple
+#ec6b55 =>	Coral
+#6bb6a1 =>	Aqua
+*/
+/*
+==Fonts
+*/
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer, nav, h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, figure, canvas, video, th, td, tr {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+}
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, main, nav, section, summary {
+	display: block;
+}
+
+/* apply a natural box layout model to all elements */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before, .cf:after {
+	content:"";
+	display:table;
+}
+.cf:after {
+	clear:both;
+}
+.cf {
+	zoom:1;
+}
+/*
+== Basic Links and button actions
+*/
+a {
+	text-decoration: none;
+	color: #462445; /* dk purple */
+}
+a:hover, a:focus {
+	outline: none;
+	border: none;
+	background-color:rgba(100,56,79,.3); /* med purple - transparent*/
+}
+a img {
+	border: none;
+	outline: 0;
+}
+
+a.action, input[type=submit], input[type=button], button{
+	background-color:#ddd; /* gray */
+	display:block; 
+	font-size:1.2em;
+	text-align: center;
+    border:none;
+    color:#000;
+    border-bottom:solid 1px #ccc;
+    padding:.5em 1em;
+    width:90%;
+    margin:0 auto;
+    -webkit-border-radius: 6px;    
+	border-radius: 6px;
+}
+.action.primary, input[type=submit]{
+	background-color: #6bb6a1; /* turquoise */
+	color:#fff;
+	border-color:#3a6459;
+}
+/* 
+== Base background and fonts
+*/
+html {
+	background-color: #462445 ;/* dk purple */
+	border-top:solid 8px #2b152a;
+}
+
+body {
+	font: 100% "Droid Sans", Myriad, "Myriad Pro", Tahoma,  Arial, Helvetica, sans-serif;
+	line-height: 1.5;
+	background: #efefef;
+	color: #000;
+	font-weight:normal;
+	font-style:normal;
+	width: 98%;
+	margin: 0 auto;
+	min-width: 320px;
+	
+}
+h1, h2, h3, h4{
+	font-family: FengardoNeueRegular, Tahoma, Verdana, Segoe, sans-serif;
+}
+
+/*
+== header styles
+*/
+header {
+	width: 100%;
+	padding-top: 1px;
+	overflow: hidden;
+	background-color:#462445;
+	height: 70px;
+}
+
+header h1 {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: center top;	
+	min-height: 60px;
+	display: block;
+}
+header h1 a{
+	text-indent: -99999em;
+	display: block;
+	min-height: 60px;
+}
+header a {
+	text-decoration: none;
+	border: none;
+	color: white;
+}
+header a:hover {
+	border: none;
+	background-color: transparent;
+}
+header h2 {
+	display: none;
+}
+/*
+== nav styles
+@source http://codepen.io/bradfrost/pen/sHvaz
+@see scripts/main.js 
+*/
+
+
+#menu {
+	background-color:#64384f;  /* dk purple */
+	clear: both;
+	/* CSS3 animation transitions */
+}
+
+/* .js and .active stuff  */
+
+#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#menu li a {	
+	text-transform: uppercase;
+	display: block;
+	color: white;
+	border: none;
+	font-size: 1.2em;
+	margin-bottom: 1px;
+	padding-left: 1em;
+	line-height: 2em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+/*end new better menu*/
+
+
+#menu a:hover,
+#menu a:focus{
+		background-color: #b0606d;
+	}
+#menu a.current {
+	color: rgb(123, 121, 143);
+	cursor: default;
+	color: rgb(237, 228, 214);
+}
+#menu {
+	width: auto;
+	margin: 0;
+	margin-bottom: 1em;
+	overflow: hidden
+}
+
+/*misson styles*/
+
+.mission {
+	text-align: center;
+	margin: 0 auto;
+	
+}
+
+.mission h1 {
+	font-weight: bold;
+	font-size: 1.6em;
+	text-align: center;
+	margin-bottom: .5em;
+	
+}
+
+/*  */
+
+/*
+== page-content styles
+*/
+.page-content{
+	margin-top: 1em;
+}
+.page-content article{
+	width:90%;
+	margin:0 auto;
+}
+
+.feature {
+	
+	margin: 2em 0;
+}
+
+.page-content h1 {
+	font-size: 1.8em;
+	
+}
+
+.feature h2 a {
+	color: rgb(76, 67, 65);
+	border: none;
+}
+
+article h2 a:hover {
+	color: rgb(123, 121, 143);
+	border: none;
+}
+
+#demo-video h1, #demo-video p{
+	display: none; /* hide these elements in the smallest devices */
+}
+
+.feature {
+	margin-bottom: 1.6em;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.feature h2 {
+	font-size: 1.6em;
+	margin-bottom: 0;
+}
+
+.caption {
+	font-size: .8em;
+	margin-top: 1em;
+}
+
+article p.pubdate {
+	font-size: 1em;
+	text-transform: uppercase;
+	margin-bottom: 1em;
+}
+/* feature images*/
+
+article .preview {
+    height: 175px;
+    width:100%;
+}
+
+.feature-personalize .preview {
+	background: url(../images/sm-feature-personalize-banner.jpg) no-repeat;
+}
+
+.feature-friends .preview {
+	background: url(../images/sm-feature-friends-banner.jpg) no-repeat;
+}
+
+.feature-portable .preview {
+	background: url(../images/sm-feature-portable-banner.jpg) no-repeat;
+}
+/* == gallery styles */
+.image-box{
+	position: relative;
+}
+.image-box img{
+	padding:3%;
+	background-color:#f6f6f6;
+	margin:0 0 1em 0;
+}
+/*caption*/
+.image-box h3{
+	position: absolute;
+	left: 3%;
+	bottom: 2em;
+	background-color: rgba(0,0,0,.5);
+	color:white;
+	padding:.25em;
+}
+/* 
+== contact page
+*/
+.phone{
+	white-space: nowrap;
+}
+
+/* Form stuff here*/
+
+/*
+== aside styles
+*/
+aside {
+	
+	background-color: #e1e1e1;
+}
+
+aside section {
+	clear: both;
+}
+
+aside h2 {
+	font-size: 1.4em;
+	margin-bottom:1em;
+	text-align:center;
+	border: none;
+}
+aside .product-tour {
+	background-color: #ec6b55;
+	padding: 1.5em 5%;
+}
+aside .developer-blog article{
+	width: 100%;
+	padding:.5em 5% ;
+	background-color: #6ab5a0;
+}
+aside .developer-blog h2{
+	background-color: #6ab5a0;
+	text-align: center;
+	margin: 0;
+	padding-top:1em;
+}
+aside .developer-blog h3{
+	background-color:#4ba084;
+	max-width:400px;
+	margin:0 auto;
+	padding:.25em;
+}
+
+
+
+/*
+== footer styles
+*/
+#page-footer {
+	clear:both;
+	padding-bottom: 2em;
+	background: #2b152a;
+	padding-top: 1.5em;
+	color:#fff;
+}
+
+#page-footer section{
+	padding:1em 5%;
+}
+#page-footer h2{
+	font-size: 1.25em;
+}
+
+
+/* TODO: Add Media Queries Here */
