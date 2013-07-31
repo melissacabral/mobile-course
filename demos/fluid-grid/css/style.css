@@ -1,0 +1,113 @@
+/* ==========================================================================
+   Basic Fluid Grid styles. works with normalize.css
+   ========================================================================== */
+
+/* COLORS
+
+dark brown: #403131 
+darker blue: #4B8CA6
+medium blue: #75B2BF
+light blue: #BFD6D9
+green:#5C7362
+yellow: #E5BC7A;
+beige: #D9BBA0;
+
+*/
+
+/* import google fonts */
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Libre+Baskerville&subset=latin,latin-ext);
+
+/*self hosted fonts*/
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('../font/DroidSans-webfont.eot');
+    src: url('../font/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DroidSans-webfont.woff') format('woff'),
+         url('../font/DroidSans-webfont.ttf') format('truetype'),
+         url('../font/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'droid_sansbold';
+    src: url('../font/DroidSans-Bold-webfont.eot');
+    src: url('../font/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../font/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../font/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html{
+    background-color:#403131;
+}
+body{
+    font-size:100%;
+    background-color:#BFD6D9;
+    width:98%;
+    max-width:1200px;
+    min-width: 320px;
+    margin:0 auto;
+    font-family: "Libre Baskerville",serif;
+}
+
+
+header{
+    background-color:#5C7362;
+    padding:2%; /* 24 / 1200  */
+    font-family:"Roboto Condensed", sans-serif;
+    color:#BFD6D9;
+}
+
+header h1{
+    font-weight: 700;
+    font-size:4em; /* 16 x 4 */
+}
+aside{
+    background-color: #4B8CA6;
+    width:31.25%; /* 375 / 1200 includes padding */
+    float:left;
+    margin:2%; /* 24 / 1200  */
+    padding:2%; /* 24 / 1200  */aside:;
+    font-family: "droid_sansregular",serif;
+    font-size:0.8125em; /*  12.8 / 16  */
+}
+aside h3{
+    font-size:1.4615384em; /* 19 / 13 19px*/ 
+    font-family:"droid_sansbold", serif;
+    font-weight: 700;
+
+}
+main{
+    background-color: #75B2BF;
+    width: 62.5%; /* 750 / 1200  it includes padding */
+    float: right;
+    margin:2% 2% 2% 0; /* 24 / 1200  */
+    padding:2%; /* 24 / 1200  */
+}
+
+main h3{
+    font-family:"Roboto Condensed", sans-serif;
+    font-size:2.5em; /* 40 / 16 */
+}
+
+footer{
+    background-color: #5C7362;
+    clear: both;
+    padding:2%; /* 24 / 1200  */
+    color:#BFD6D9;
+}
+
+/*quickie reset of margins around headings and p*/
+p, h1, h2, h3{
+    margin: 2% 0; /*size varies from container */
+}
