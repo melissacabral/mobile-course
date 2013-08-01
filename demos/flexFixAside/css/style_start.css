@@ -22,10 +22,7 @@ body {
 	margin:0 auto;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
+
 ul{
 	list-style:none;
 }
@@ -100,10 +97,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-aside a:before{
-	content:"• ";
-	color:#3D769C;
-}
 
 cite {
     display: block;
@@ -136,21 +129,16 @@ ul{
     padding: .625em 1.0548523% 1.5em; /* 10px/16px, 10px/948, 24px/16px */
 }
 main {
-	display: table-cell;
+	
 	padding-right: 2.5316456%; /* 24px / 948px */
 }
 
 aside {
-    display: table-cell;
-	width: 300px;
+    
+
 	padding-top:2em;
 }
 
-img{
-	max-width:100%;
-	width: 100%;
-	
-}
 	
 aside img{
 	padding:0.5em 0;

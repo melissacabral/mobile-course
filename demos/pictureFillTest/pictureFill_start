@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Switching Images with PictureFill</title>
+
+		<style>
+		html{
+			background:#D9BF9B;
+		}
+		body{
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+			font-size:100%;
+			margin:2em auto;
+			padding:3em;
+			width:80%;
+			max-width:1080px;
+			background:#FFF;
+		}
+		h1{
+			color:#3673B3;
+		}
+		img{
+			
+		}
+		</style>
+
+	</head>
+	<body>
+		<h1> PictureFill</h1>
+		<p> Flexible image Replacement Using PictureFill.js. Learn More about it on <a href="https://github.com/scottjehl/picturefill"> Github</a></p>
+		<section>
+		 <!-- insert the necessary span here   -->
+		</section>
+	</body>
+</html>

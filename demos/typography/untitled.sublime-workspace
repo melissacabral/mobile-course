@@ -8,18 +8,24 @@
 	"buffers":
 	[
 		{
+			"contents": "",
 			"file": "/Users/tizi/Desktop/responsive/mobile-course/demos/MAIN-PROJECT/Final Project- Lynda/index.htm",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 7467,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		},
 		{
+			"contents": "",
 			"file": "/Users/tizi/Desktop/responsive/mobile-course/demos/MAIN-PROJECT/Final Project- Melissa/gallery.html",
+			"file_size": -1,
+			"file_write_time": -1,
 			"settings":
 			{
-				"buffer_size": 4752,
+				"buffer_size": 0,
 				"line_ending": "Unix"
 			}
 		}
@@ -119,7 +125,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -127,7 +133,7 @@
 					"file": "/Users/tizi/Desktop/responsive/mobile-course/demos/MAIN-PROJECT/Final Project- Lynda/index.htm",
 					"settings":
 					{
-						"buffer_size": 7467,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
@@ -155,7 +161,7 @@
 					"file": "/Users/tizi/Desktop/responsive/mobile-course/demos/MAIN-PROJECT/Final Project- Melissa/gallery.html",
 					"settings":
 					{
-						"buffer_size": 4752,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
