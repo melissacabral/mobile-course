@@ -267,6 +267,13 @@ article .preview {
     width:100%;
 }
 
+
+.preview a {
+    display: block;
+    height: 100%;
+
+}
+
 .feature-personalize .preview {
 	background: url(../images/sm-feature-personalize-banner.jpg) no-repeat;
 }
