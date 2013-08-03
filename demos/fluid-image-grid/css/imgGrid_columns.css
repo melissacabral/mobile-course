@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Basic Fluid Grid styles. works with normalize.css
+   ========================================================================== */
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+html{
+    background-color:#4f5760;
+    background-color:#565769;
+}
+body{
+    font-size:1em;
+     font-family: Tahoma, sans-serif;
+    background-color:#cacaca;
+    width:98%;
+    /*max-width:1200px;*/
+    min-width: 320px;
+    margin:0 auto;
+}
+header{
+    background-color:#a7a7a7;
+    background-color:#565769;
+    padding:2.08%;
+}
+
+main{
+    background-color: #a7a7a7;
+     background-color:#E8DFCF;
+    
+    margin:2.08%;
+    padding:2.08%;
+    text-align:center;
+}
+footer{
+    background-color: #a7a7a7;
+    clear: both;
+    padding:2.08%;
+}
+h1{
+    color: #E8DFCF;
+}
+h3{
+    font-size:0.9em;
+    color:white;
+}
+
+/*quickie reset of margins around headings and p*/
+p, h1, h2, h3{
+    margin: 2.08% 0;
+}
+
+/* 
+Fluid Image Additions*/
+
+ img, embed, object, video{
+    max-width: 100%; /* only works with ie7+ */
+
+ }
+
+#photos {
+   -webkit-column-count: 1;
+   -webkit-column-gap:   1px;
+   -moz-column-count:    1;
+   -moz-column-gap:      1px;
+   column-count:         1;
+   column-gap:           1px;
+  
+}
+
+#photos img {
+    padding:3.5%;
+    background-color: white;
+}
+
+.image-box{
+  margin:0 2% 4.5% 2%;
+    position:relative;
+
+    -webkit-box-shadow:  2px 5px 5px 4px #888;
+    box-shadow:  2px 5px 5px 4px #888;
+    background-color:white;
+}
+.image-box h3{
+    background-color: rgba(255,255,255,.4);
+    position: absolute;
+    margin: 0;
+    bottom:10px;
+    left:0;
+    width: 100%;
+    padding:5%;
+    line-height: 1em;
+}
+
+@media (min-width: 650px) {
+  #photos {
+  -moz-column-count:    2;
+  -webkit-column-count: 2;
+  column-count:         2;
+  }
+}
+@media (min-width: 1000px) {
+  #photos {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
+}

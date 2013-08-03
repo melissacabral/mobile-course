@@ -86,7 +86,7 @@ img{
 }
 
 #second img{
-	width:100%;
+	width:100%; /*necessary because image may be smaller than parent. This sets it to 100% */
 	max-width:100%;
 }
 
@@ -126,6 +126,7 @@ header p{
 article p:first-of-type {
 	font-size: 1.2em;
 	font-style: italic;
+	color:yellow;
 }
 h1+p{
 	font-size:1.6em;

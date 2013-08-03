@@ -237,6 +237,15 @@ article h2 a:hover {
 #demo-video h1, #demo-video p{
 	display: none; /* hide these elements in the smallest devices */
 }
+.preview a, .preview a:hover {
+	display: block;
+	border: none;
+	height: 100%;
+}
+
+.preview a {
+    
+}
 
 .feature {
 	margin-bottom: 1.6em;
@@ -276,11 +285,7 @@ article .preview {
 }
 
 
-.preview a {
-    display: block;
-    height: 100%;
 
-}
 
 .feature-personalize .preview {
 	background: url(../images/sm-feature-personalize-banner.jpg) no-repeat;

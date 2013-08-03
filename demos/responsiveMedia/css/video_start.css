@@ -97,33 +97,7 @@ figure img{
 	max-width:100%;
 }
 /*flexible videos */
-.video {
-   position: relative;
-     padding-bottom: 56.25%;
-     padding-top: 25px;
-     height: 0;
-     margin-bottom: 1em;
- }
-.video iframe {
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-	 
-}
 
-.second iframe{
-	max-width:560px;
-	max-height:315px;
-}
-
-object,
-embed,
-iframe{
-	max-width:100%;
-	
-}
 
 /*typography*/
 body{add the video

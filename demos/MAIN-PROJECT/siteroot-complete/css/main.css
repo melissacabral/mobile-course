@@ -284,6 +284,7 @@ article h2 a:hover {
 .preview a, .preview a:hover {
 	display: block;
 	border: none;
+	height:100%;
 }
 
 .feature {
@@ -308,10 +309,7 @@ article p.pubdate {
 	text-transform: uppercase;
 	margin-bottom: 1em;
 }
-.preview a {
-	display: block;
-	height:100%;
-}
+
 article .preview {
 	height: 175px;
 	width:100%;

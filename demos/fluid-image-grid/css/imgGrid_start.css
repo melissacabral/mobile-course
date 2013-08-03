@@ -1,0 +1,74 @@
+/* ==========================================================================
+   Basic Fluid Grid styles. works with normalize.css
+   ========================================================================== */
+/* apply a natural box layout model to all elements */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/**
+ * For modern browsers */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
+
+html{
+    background-color:#4f5760;
+    background-color:#565769;
+}
+body{
+    font-size:1em;
+     font-family: Tahoma, sans-serif;
+    background-color:#cacaca;
+    width:98%;
+    /*max-width:1200px;*/
+    min-width: 320px;
+    margin:0 auto;
+}
+header{
+    background-color:#a7a7a7;
+    background-color:#565769;
+    padding:2.08%;
+}
+
+main{
+    background-color: #a7a7a7;
+     background-color:#E8DFCF;
+    
+    margin:2.08%;
+    padding:2.08%;
+    text-align:center;
+}
+footer{
+    background-color: #a7a7a7;
+    clear: both;
+    padding:2.08%;
+}
+h1{
+    color: #E8DFCF;
+}
+h3{
+    font-size:0.9em;
+    color:white;
+}
+
+/*quickie reset of margins around headings and p*/
+p, h1, h2, h3{
+    margin: 2.08% 0;
+}
+
+/* 
+Fluid Image Additions*/
+
+ 
+ /*
+Fluid Grid additions
+  */
