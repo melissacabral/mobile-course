@@ -1,4 +1,7 @@
 <?php
+//EDIT THIS WITH YOUR EMAIL ADDRESS - this is where the mail will be sent
+$admin_email = 'example@gmail.com
+
 //change to error_reporting(E_ALL) if you need to debug notices
 error_reporting(E_ALL ^ E_NOTICE);
 
@@ -7,16 +10,22 @@ error_reporting(E_ALL ^ E_NOTICE);
  */
 
 //display errors for form fields
-function display_error( $errors){
+function display_error_or_success( $errors, $mail_sent){
 	//if there are errors
-	if(!empty($errors)){
-		echo '<section class="error-message"> <h1>Your message could not be sent for the following reasons:</h1>';
+	if(!empty($errors) OR !$mail_sent){
+		echo '<section class="error form-message"> <h1>Your message could not be sent </h1>';
 		//show each one, separated by a break tag
 		foreach($errors as $error){
 			echo $error;
 			echo '<br />';
 		}
 		echo '</section>';
+	}elseif(1==$mail_sent){
+		echo '<section class="success form-message"> 
+				<h1>Thank You for contacting us! </h1> 
+				<p>We\'ll get back to you shortly.</p>
+				</section>';
+
 	}
 }
 
@@ -78,7 +87,7 @@ if( 1 == $_POST['did_submit'] ):
 	//only send the mail if the form was valid
 	if( true == $valid ):
 		//get ready to send mail - set up mail() parameters
-		$to = 'example@mail.com';
+		$to = $admin_email;
 		$mail_subject = "$title - A Contact Form Submission";
 
 		$body = "Subject: $subject \n";
@@ -91,16 +100,7 @@ if( 1 == $_POST['did_submit'] ):
 		$header .= "From: $name \r\n";
 
 		//send it! did_send will equal 1 if the mail sends, 0 if it fails to send
-		$did_send = mail( $to, $mail_subject, $body, $header );
-
-		//handle success/failure user feedback
-		if( $did_send ):
-			$display_msg = 'Thank you for your message, ' . $name . ', I will get back to you soon.';
-			$css_class = 'success';
-		else:
-			$display_msg = 'Sorry, there was a problem sending your message.';
-			$css_class = 'error';
-		endif; //did_send
+		$mail_sent = mail( $to, $mail_subject, $body, $header );		
 
 	endif; // still valid
 

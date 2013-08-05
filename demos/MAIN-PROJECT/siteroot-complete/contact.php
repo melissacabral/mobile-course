@@ -42,7 +42,7 @@
 
               <p>Please let us know how we can help you. It only takes a moment, and we'll get back to you shortly. </p> 
 
-           <?php display_error($errors); ?>
+           <?php if( $_POST['did_submit'] ){ display_error_or_success($errors, $mail_sent); } ?>
 
             <form action="contact.php" method="post" name="signup" id="signup" novalidate >
 

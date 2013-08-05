@@ -350,8 +350,12 @@ article .preview {
 /* 
 == contact page
 */
+.mobile-emphasis{
+		margin:1em 0;
+	}
 .phone{
 	white-space: nowrap;
+
 }
 
 /*
@@ -363,6 +367,23 @@ article .preview {
 	margin:1em 0 3em;
 	font-size:1.2em; /*all form text gets uniformly larger */
 }
+.form-message{
+	padding:1em;
+	
+	margin: 1em 0;
+}
+.form-message h1{
+	font-size:1.4em;
+}
+.form-message.error{
+	background-color: #FBDBE0;
+	border: solid 1px #FA7477;
+}
+.form-message.success{
+	background-color: #DDFFD7;
+	border: solid 1px #12970F;
+}
+
 /*larger target area for all inputs*/
 input, textarea, select {
 	width: 100%;
@@ -776,6 +797,7 @@ aside .developer-blog h3{
 	/* 
 	== contact page
 	*/
+
 	.mobile-emphasis a{
 		background-color: transparent !important;
 		width: auto;
