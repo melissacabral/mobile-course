@@ -68,7 +68,7 @@ if( 1 == $_POST['did_submit'] ):
 
 	//Begin validating - check for errors
 
-	//check for empty name field
+	//check for empty name field with string length
 	if( 0 == strlen($name) ){
 		$valid = false;
 		$errors['name'] = 'Please fill out your name.';
