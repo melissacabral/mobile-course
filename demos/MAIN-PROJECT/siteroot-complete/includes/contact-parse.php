@@ -1,6 +1,6 @@
 <?php
 //EDIT THIS WITH YOUR EMAIL ADDRESS - this is where the mail will be sent
-$admin_email = 'example@gmail.com
+$admin_email = 'example@gmail.com';
 
 //change to error_reporting(E_ALL) if you need to debug notices
 error_reporting(E_ALL ^ E_NOTICE);
@@ -91,7 +91,7 @@ if( 1 == $_POST['did_submit'] ):
 		$mail_subject = "$title - A Contact Form Submission";
 
 		$body = "Subject: $subject \n";
-		$body = "Name: $name \n";
+		$body .= "Name: $name \n";
 		$body .= "Email: $email \n";
 		$body .= "URL: $url \n\n";
 		$body .= "Message: $message \n\n";
