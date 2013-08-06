@@ -1,9 +1,5 @@
 @charset "UTF-8";
-/* 
-
-------------  step 1 page  ------------------------
-
-color palette
+/* color palette
 #462445	=>	Dark Purple
 #64384f	=>	Medium Purple
 #ec6b55 =>	Coral
@@ -79,20 +75,19 @@ a img {
 	border: none;
 	outline: 0;
 }
-
 a.action, input[type=submit], input[type=button], button{
 	background-color:#ddd; /* gray */
 	display:block; 
+	-webkit-border-radius: 6px;    
+	border-radius: 6px;
 	font-size:1.2em;
 	text-align: center;
-    border:none;
-    color:#000;
-    border-bottom:solid 1px #ccc;
-    padding:.5em 1em;
-    width:90%;
-    margin:0 auto;
-    -webkit-border-radius: 6px;    
-	border-radius: 6px;
+	border:none;
+	color:#000;
+	border-bottom:solid 1px #ccc;
+	padding:.5em 1em;
+	width:90%;
+	margin:0 auto;
 }
 .action.primary, input[type=submit]{
 	background-color: #6bb6a1; /* turquoise */
@@ -114,12 +109,9 @@ body {
 	color: #000;
 	font-weight:normal;
 	font-style:normal;
-	/*
-	TODO:
 	width: 98%;
 	margin: 0 auto;
-	min-width: 320px;
-	*/	
+	min-width: 320px;	
 }
 h1, h2, h3, h4{
 	font-family: FengardoNeueRegular, Tahoma, Verdana, Segoe, sans-serif;
@@ -166,16 +158,23 @@ header h2 {
 @see scripts/main.js 
 */
 
-/*TODO:  Style .menu-link when you do NAV demo */
 
 #menu {
 	background-color:#64384f;  /* dk purple */
 	clear: both;
-	/* Add CSS3 animation transitions here when you do NAV demo */
+	-webkit-transition: all 0.3s ease-out;  /* CSS enhancement - animation */ 
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
-
-/* Add .js and .active stuff here when you do NAV demo */
-
+.js #menu {
+	overflow: hidden;
+	max-height: 0;
+}
+#menu.active {
+	max-height: 15em;
+}
 #menu ul {
 	margin: 0;
 	padding: 0;
@@ -197,10 +196,11 @@ header h2 {
 /*end new better menu*/
 
 
+
 #menu a:hover,
 #menu a:focus{
-		background-color: #b0606d;
-	}
+	background-color: #b0606d;
+}
 #menu a.current {
 	color: rgb(123, 121, 143);
 	cursor: default;
@@ -229,7 +229,10 @@ header h2 {
 	
 }
 
-/* TODO:  Add Fluid Images here */
+
+/*
+== Fluid Images
+*/
 
 /*
 == page-content styles
@@ -265,6 +268,11 @@ article h2 a:hover {
 #demo-video h1, #demo-video p{
 	display: none; /* hide these elements in the smallest devices */
 }
+.preview a, .preview a:hover {
+	display: block;
+	border: none;
+	height:100%;
+}
 
 .feature {
 	margin-bottom: 1.6em;
@@ -278,8 +286,6 @@ article h2 a:hover {
 	margin-bottom: 0;
 }
 
-
-
 .caption {
 	font-size: .8em;
 	margin-top: 1em;
@@ -290,7 +296,23 @@ article p.pubdate {
 	text-transform: uppercase;
 	margin-bottom: 1em;
 }
-/* TODO:  Add .preview stuff when doing stretchy image backgrounds*/
+
+article .preview {
+	height: 175px;
+	width:100%;
+}
+
+.feature-personalize .preview {
+	background: url(../images/sm-feature-personalize-banner.jpg) no-repeat;
+}
+
+.feature-friends .preview {
+	background: url(../images/sm-feature-friends-banner.jpg) no-repeat;
+}
+
+.feature-portable .preview {
+	background: url(../images/sm-feature-portable-banner.jpg) no-repeat;
+}
 
 /*
 == gallery styles
@@ -315,11 +337,109 @@ article p.pubdate {
 /* 
 == contact page
 */
+.mobile-emphasis{
+		margin:1em 0;
+	}
 .phone{
 	white-space: nowrap;
+
 }
 
-/* TODO:  Add Form stuff here*/
+/*
+== form styles
+*/
+
+.page-content form{
+	width:100%;
+	margin:1em 0 3em;
+	font-size:1.2em; /*all form text gets uniformly larger */
+}
+.form-message{
+	padding:1em;
+	
+	margin: 1em 0;
+}
+.form-message h1{
+	font-size:1.4em;
+}
+.form-message.error{
+	background-color: #FBDBE0;
+	border: solid 1px #FA7477;
+}
+.form-message.success{
+	background-color: #DDFFD7;
+	border: solid 1px #12970F;
+}
+
+/*larger target area for all inputs*/
+input, textarea, select {
+	width: 100%;
+	max-width: 500px;
+	font-family: Inconsolata, "Courier New", Courier, monospace;
+	padding:.5em;
+	font-size: 1em;
+
+}
+select, input[type=submit]{
+	font-family: inherit;
+}
+
+/* check and radio boxes are special, remove the width */
+input[type=checkbox],
+input[type=radio]{
+	width: auto;
+}
+/* on small screens, radios and checkboxes are easier to choose if they are in vertical lists */
+.choice-list{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.choice-list li{
+	background-color: rgba(0,0,0,.1);
+	margin:.5em 0;
+	
+	border-radius: 2em;
+}
+.choice-list li label{
+	display: block;
+	padding:.3em;
+	margin:0;
+}
+
+fieldset {
+	width: 100%;
+	border: none;
+	background: rgba(0,0,0,.05);
+	position: relative;
+	min-width: 250px;
+	padding:1em;
+	margin: 1em 0;	
+}
+legend{
+	display: block;
+	padding:.25em .5em;
+	background-color:#DDD;
+	color:#white;
+	position:relative;
+	left:-.7em;
+	font-size: 1.1em
+}
+label, .label{
+	display:block;
+	margin: .75em 0 .1em;
+	font-size: 1em;
+	clear: both;
+}
+
+input[type=radio] + label,
+input[type=checkbox] + label{
+	display:inline;
+	padding-right:1em;
+}
+
+
+
 
 /*
 == aside styles
@@ -361,7 +481,14 @@ aside .developer-blog h3{
 	padding:.25em;
 }
 
-/* TODO: Add Tiny Nav technique here for ul/select conversion */
+/* 
+ == Tiny Nav 
+ <select> replaces submenu   
+ @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
+ @see scripts/main.js 
+
+ */
+
 
 /*
 == footer styles
@@ -381,5 +508,10 @@ aside .developer-blog h3{
 	font-size: 1.25em;
 }
 
+/* 
+== tablet and large phone styles
+*/
 
-/* TODO: Add Media Queries Here */
+/* ==desktop styles*/
+
+/* ==largest desktop styles*/

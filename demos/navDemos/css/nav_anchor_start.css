@@ -259,37 +259,11 @@ input[type="submit"] {
 	header h1{
 		text-align:left;
 	}
-	/*main h3{
-	display:none;
 	
-}
 	
 
-nav styles
-	#mainNav {
-		width:inherit;
-		padding: 0;
-		position:absolute;
-		top:80px;
-		border-bottom:#4E2D26 3px solid;	
-	}
-	
-	#mainNav li {
-		float: left;
-		width: auto;
-	}
-		#mainNav li.toTop{
-		display:none;
-	}
-	
-
-	#mainNav a {
-		font-size: 1em;
-		text-align: center;
-		cursor: pointer;
-		padding:.5em 1em;		
-		background-color:#B1824C;
-	}*/
+/*nav styles
+	*/
 	
 	/*mission styles*/
 	.mission {
@@ -339,21 +313,7 @@ nav styles
 	body {
 		max-width: 1080px;	
 	}
-	/*#mainNav{
-		max-width:inherit;
-		
-	}
-	
-	#mainNav a {
-		font-size: 1.1em;
-		padding:.5em 1.3em 0.25 1.5em;		
-		background-color:#B1824C;
-	}
-
-	#mainNav li {
-		margin-right:0;
-		
-	}*/
+	/*nav styles */
 
 	
 	/*mission styles*/

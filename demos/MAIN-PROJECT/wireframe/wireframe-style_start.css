@@ -1,0 +1,86 @@
+*{
+
+	/* apply a natural box layout model to all elements
+	http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; 
+}
+
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before, .cf:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+.cf {
+	zoom:1;
+}
+
+/* colors, just to tell everything apart */
+html{
+	background-color:#ccc;
+	font-family: sans-serif;
+}
+body{
+	background-color:white;
+	
+}
+
+header,
+article,
+#banner,
+footer section{
+	padding:1em;
+}
+
+header, header *{
+	background-color:rgba(100,0,0, .3); /* pink */
+}
+
+main, main *{
+	background-color:rgba(0,100,50,.2); /* aqua */
+}
+#banner{
+	background-color:rgba(0,0,100,.2); /* blue */
+}
+aside,
+aside *{
+	background-color:rgba(100,0,100,.3);/* purple */
+}
+
+footer, footer *{
+	background-color: rgba(150,100,0,.3);/*brown*/
+}
+
+
+/* basic layout */
+
+
+
+
+/*basic typography*/
+h1{
+	color:white;
+	font-size:3em;
+	padding:0.5em;
+}
+a{
+	color:white;
+	font-family:Tahoma, Geneva, sans-serif;
+	text-decoration:none;
+}
+a:hover{
+	text-decoration:underline;
+	background:#600;
+}
+
+
+/*tablet styles*/
+
+/*desktop styles*/
+
+/*larger desktop styles*/

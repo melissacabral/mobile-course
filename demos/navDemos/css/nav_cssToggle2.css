@@ -107,7 +107,7 @@ h3{
 }
 
 /*nav styles- toggle */
-/* basci nav Styles*/
+/* basic nav Styles*/
 nav ul {
 	list-style: none;
 	padding-left:0;
@@ -136,10 +136,12 @@ nav ul {
 }
 
 /*
-== toggle nav
+== toggle nav ========================
 http://codepen.io/bradfrost/pen/sHvaz
 */
 
+/* .js class added dynamically by JS. 
+.active class is toggled by JS  */
 a.menu-link {
      float: left;
      display: block;
@@ -151,18 +153,25 @@ a.menu-link {
 	 text-decoration:none;
 	
 }
+/*adding plus and minus signs after MENU */
 a.menu-link:after{
-	content:
+	content:"+";
 }
+a.active:after{
+	content:"–";
+}
+
 
 nav[role=navigation] {
      clear: both;
-     -webkit-transition: all 0.3s ease-out; 
+    -webkit-transition: all 0.3s ease-out; 
      -moz-transition: all 0.3s ease-out;
      -ms-transition: all 0.3s ease-out;
      -o-transition: all 0.3s ease-out;
      transition: all 0.3s ease-out;
+     
 }
+
 .js nav[role=navigation] {
      overflow: hidden;
      max-height: 0;
@@ -186,7 +195,7 @@ nav a:hover {
 }
 
 /*
-end nav
+==== end nav ================================
 */
 
 /*misson styles*/
