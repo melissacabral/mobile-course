@@ -42,7 +42,11 @@
 
               <p>Please let us know how we can help you. It only takes a moment, and we'll get back to you shortly. </p> 
 
-           <?php if( $_POST['did_submit'] ){ display_error_or_success($errors, $mail_sent); } ?>
+           <?php if( $_POST['did_submit'] ){
+               display_error_or_success($errors, $mail_sent); 
+             }
+             //if mail was not sent, show the form. this will hide the form on successful submission
+             if( 1 != $mail_sent ){ ?>
 
             <form action="contact.php" method="post" name="signup" id="signup" novalidate >
 
@@ -159,6 +163,7 @@
       <input type="submit" name="submit" id="submit" value="Submit">
 
   </form> 
+  <?php } //end if mail not sent ?>
 </article>
 </div>
 <aside role="complementary" class="cf">
