@@ -96,52 +96,6 @@ select{
     right: 5px;
     top: 70px;
 }
-#mainNav{
-	background-color:#B1824C;
-	width: 100%;
-	margin: 0;
-	overflow: hidden;
-	margin-bottom:0;
-	padding: 0;
-	border-bottom:#4E2D26 3px solid;	
-}
-	
-nav ul {
-	list-style: none;
-	padding-left:0;
-}
-
-#mainNav a, #mainNav h3 {
-	text-transform: uppercase;
-	text-align: center;
-	display: block;
-	color: white;
-	border: none;
-	font-size: 1em;
-	text-align: left;
-	color: white;	
-	display: block;
-	margin-bottom: 1px;
-	padding:.75em 1em;
-	line-height: 2em;
-	text-transform: uppercase;
-	cursor: pointer;
-	background-color:#B1824C;
-	padding-bottom:0.02em;	
-}
-
-#mainNav a:hover{
-		background-color:#4E2D26;
-	}
-
-#mainNav li {
-	/*margin: 0;
-	float: none;
-	position: relative;*/
-	float: left;
-	width: auto;
-	margin-right:0;
-}
 
 /*misson styles*/
 
@@ -246,6 +200,55 @@ input[type="submit"] {
 	}
 
 /*nav styles*/
+#mainNav{
+	background-color:#B1824C;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	margin-bottom:0;
+	padding: 0;
+	border-bottom:#4E2D26 3px solid;	
+}
+	
+nav ul {
+	list-style: none;
+	padding-left:0;
+}
+
+#mainNav a, #mainNav h3 {
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	color: white;
+	border: none;
+	font-size: 1em;
+	text-align: left;
+	color: white;	
+	display: block;
+	margin-bottom: 1px;
+	padding:.75em 1em;
+	line-height: 2em;
+	text-transform: uppercase;
+	cursor: pointer;
+	background-color:#B1824C;
+	padding-bottom:0.02em;	
+}
+
+#mainNav a:hover{
+		background-color:#4E2D26;
+	}
+
+#mainNav li {
+	/*margin: 0;
+	float: none;*/
+	position: relative;
+	float: left;
+	width: auto;
+	margin-right:0;
+}
+
+
+
 	#mainNav {
 		width: 100%;
 		padding: 0;

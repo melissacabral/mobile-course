@@ -174,10 +174,10 @@ nav[role=navigation] {
 
 .js nav[role=navigation] {
      overflow: hidden;
-     max-height: 0;
+     max-height: 0; 
 }
 nav[role=navigation].active {
-     max-height: 30em;
+     max-height: 30em; 
 }
 nav[role=navigation] ul {
      margin: 0;

@@ -1,12 +1,10 @@
-/* color palette
-#462445	=>	Dark Purple
-#64384f	=>	Medium Purple
-#ec6b55 =>	Coral
-#6bb6a1 =>	Aqua
-
-#B1824C middle brown
-#4E2D26 dark brown
+/* 
+///// COLORS //////
+#B1824C; light brown
+#7E5D39; middle brown
+#4E2D26; dark brown
 */
+
 
 
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
@@ -62,7 +60,6 @@ article a {
 	border-bottom: 1px dotted #667F6A;
 }
 
-
 /*header styles*/
 header {
 	width: 100%;
@@ -81,19 +78,8 @@ header h1{
 	text-align:center;
 }
 
-/*#mainNav h2, #mainNav #menuToggle {
-	display: none;
-}*/
 
-/*nav styles*/
-#mainNav{
-	background-color:#B1824C;
-	width: 100%;
-	margin: 0;
-	overflow: hidden;
-}
 main h3{
-	
 	padding-left: 1em;
 	margin:0;
 	padding:0.25em 0 0.25em 0.5em;;
@@ -113,12 +99,20 @@ main h3 a:hover{
 	color:#4E2D26;
 }
 
+header h1{
+	padding-bottom:0;
+}
+h3{
+	margin:0;
+}
+
+/*nav styles- toggle */
+/* basic nav Styles*/
 nav ul {
 	list-style: none;
 	padding-left:0;
 }
-
-#mainNav a, #mainNav h3 {
+#menu a {
 	text-transform: uppercase;
 	text-decoration:none;
 	display: block;
@@ -136,26 +130,35 @@ nav ul {
 	background-color:#7E5D39;
 	padding-bottom:0.02em;	
 }
-#mainNav a:hover{
+
+#menu a:hover{
 		background-color:#4E2D26;
-	}
-
-#mainNav li {
-	margin: 0;
-	float: none;
-	position: relative;
 }
 
-li.toTop {
-	font-size:0.65em;
-	font-style:italic;
-	text-align:center;
+/*
+== toggle nav ========================
+http://codepen.io/bradfrost/pen/sHvaz
+*/
+
+a.menu-link {
+     float: left;
+     display: block;
+     padding: 1em;
+	 background-color:#B1824C;
+	 color:white;
+	 width:100%;
+	 border-top:#B1824C 1px solid;
+	 text-decoration:none;
+	
 }
 
-li.toTop a{
-	padding:0.65em 0;
-}
+/* .js class added dynamically by JS. 
+.active class is toggled by JS  */
 
+
+/*
+==== end nav ================================
+*/
 
 /*misson styles*/
 
@@ -247,7 +250,7 @@ input[type="submit"] {
 	}
 
 /*tablet styles*/
-@media only screen and (min-width:480px) {
+@media only screen and (min-width:560px) {
 	body {
 		width: 90%;
 		margin: 0 auto;
@@ -266,30 +269,7 @@ input[type="submit"] {
 	
 
 /*nav styles*/
-	#mainNav {
-		width:inherit;
-		padding: 0;
-		position:absolute;
-		top:80px;
-		border-bottom:#4E2D26 3px solid;	
-	}
-	
-	#mainNav li {
-		float: left;
-		width: auto;
-	}
-		#mainNav li.toTop{
-		display:none;
-	}
-	
 
-	#mainNav a {
-		font-size: 1em;
-		text-align: center;
-		cursor: pointer;
-		padding:.5em 1em;		
-		background-color:#B1824C;
-	}
 	
 	/*mission styles*/
 	.mission {
@@ -339,21 +319,7 @@ input[type="submit"] {
 	body {
 		max-width: 1080px;	
 	}
-	#mainNav{
-		max-width:inherit;
-		
-	}
 	
-	#mainNav a {
-		font-size: 1.1em;
-		padding:.5em 1.3em 0.25 1.5em;		
-		background-color:#B1824C;
-	}
-
-	#mainNav li {
-		margin-right:0;
-		
-	}
 
 	
 	/*mission styles*/

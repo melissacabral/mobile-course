@@ -6,6 +6,7 @@
 
 #B1824C middle brown
 #4E2D26 dark brown
+#B1824B title brown
 */
 
 
@@ -48,15 +49,15 @@ body {
 	color: #000;
 	font-weight:normal;
 	font-style:normal;
-	width: 98%;
+	width: 100%;
 	margin: 0 auto;
 	min-width: 320px;
 }
 
 /*
-== Basic Links
-*/
-article a {
+== Basic Links*/
+
+a {
 	text-decoration: none;
 	color: #667F6A;
 	border-bottom: 1px dotted #667F6A;
@@ -77,88 +78,87 @@ header h1{
 	font-family:"Titillium Web", sans-serif;
 	font-size:3em;
 	color:#B1824C;
-	margin:0 0 0.5em 0;
-	text-align:center;
-}
-
-/*#mainNav h2, #mainNav #menuToggle {
-	display: none;
-}*/
-
-/*nav styles*/
-#mainNav{
-	background-color:#B1824C;
-	width: 100%;
-	margin: 0;
-	overflow: hidden;
-}
-main h3{
-	
-	padding-left: 1em;
+	/*margin:0 0 0.5em 0;*/
+	width:100%;
 	margin:0;
-	padding:0.25em 0 0.25em 0.5em;;
-	color:#FFF;
-	text-transform: uppercase;
-	font-weight:normal;
-	background-color:#B1824C;
-	border-bottom:#4E2D26 3px solid;	
-}
-
-main h3 a{
-	color:white;
-	text-decoration:none;
-	
-}
-main h3 a:hover{
-	color:#4E2D26;
-}
-
-nav ul {
-	list-style: none;
-	padding-left:0;
-}
-
-#mainNav a, #mainNav h3 {
-	text-transform: uppercase;
-	text-decoration:none;
-	display: block;
-	color: white;
-	border: none;
-	font-size: 1.2em;
-	text-align: left;
-	color: white;	
-	display: block;
-	margin-bottom: 1px;
-	padding-left: 1em;
-	line-height: 2em;
-	text-transform: uppercase;
-	cursor: pointer;
-	background-color:#7E5D39;
-	padding-bottom:0.02em;	
-}
-#mainNav a:hover{
-		background-color:#4E2D26;
-	}
-
-#mainNav li {
-	margin: 0;
-	float: none;
-	position: relative;
-}
-
-li.toTop {
-	font-size:0.65em;
-	font-style:italic;
 	text-align:center;
 }
 
-li.toTop a{
-	padding:0.65em 0;
+/* ===========  nav styles ================ */
+/* http://codepen.io/bradfrost/pen/IEBrz */
+
+
+.wrap {
+  position: relative;
+  -webkit-transition: all 0.5s ease-out;  
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.wrap.active {
+  left: 16em;
+}
+a.menu-link {
+
+    display: block;
+    padding: 0.85em;
+    position: absolute;
+    top: 0px;
+    background-color:#B1824C;
+    color:white;
+    text-decoration: none;
 }
 
+a.menu-link:before{
+	content:"< ";
+}
+a.active:after{
+	content:" >";
+}
+a.active:before{
+	content:"";
+}
+
+nav[role=navigation] {
+  background-color: #4E2D26;
+  clear: both;
+  overflow: hidden;
+}
+.js nav[role=navigation] {
+  width: 16em;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -16em;
+}
+nav[role=navigation] ul {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid #808080;
+}
+
+nav[role=navigation] ul li{
+	background-color:#B1824C;
+
+}
+
+nav[role=navigation] li a {
+  display: block;
+  padding: 0.8em;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+nav[role=navigation] li a:hover{
+	background-color:#4E2D26;
+}
+.lorem {
+  clear: both;
+}
+
+/* ====== end nav =========== */
 
 /*misson styles*/
-
 .mission {
 	margin: 0 auto;
 	background: url(../images/beachsm.jpg) center 0 no-repeat;
@@ -196,14 +196,12 @@ article h2 {
 	margin-bottom: 0;
 	color:#4E2D26;
 	font-family:"Titillium Web", sans-serif;
-	
 }
 .subhead{
 	font-style:italic;
 	font-size:1.2em;
 	margin-top:0;
 }
-
 
 /*form styles*/
 label {
@@ -246,73 +244,77 @@ input[type="submit"] {
 	font-style:italic;
 	}
 
-/*tablet styles*/
-@media only screen and (min-width:480px) {
-	body {
-		width: 90%;
-		margin: 0 auto;
-	}
-	/*header styles*/
-	header{
-		height:135px;
-	}
-	header h1{
-		text-align:left;
-	}
-	main h3{
-	display:none;
-	
-}
-	
 
-/*nav styles*/
-	#mainNav {
-		width:inherit;
-		padding: 0;
-		position:absolute;
-		top:80px;
-		border-bottom:#4E2D26 3px solid;	
-	}
-	
-	#mainNav li {
-		float: left;
-		width: auto;
-	}
-		#mainNav li.toTop{
-		display:none;
-	}
-	
-
-	#mainNav a {
-		font-size: 1em;
-		text-align: center;
-		cursor: pointer;
-		padding:.5em 1em;		
-		background-color:#B1824C;
-	}
-	
-	/*mission styles*/
+/* switch images on larger phones and horizontal */
+@media only screen and (min-width:480px){
 	.mission {
-		padding-left: 3.9%;
-		overflow: hidden;
 		background: url(../images/beachMd.jpg) no-repeat;
-		min-height: 478px;
-		padding-top:0;
+		min-height:500px;
 	}
-	
 
-	.mission h1 {
-		font-weight: bold;
+	.mission h1{
 		font-size:2em ;
 		letter-spacing:.1em;
-		text-align: center;
 		margin-top: 1em;
 		text-shadow: 0px -1px 0px #29211c;
 		filter: dropshadow(color=#29211c, offx=0, offy=-1);
 		background:rgba(78,45,38,0.4);
 	}
+ }
 
 
+
+/*tablet styles*/
+@media only screen and (min-width:660px) {
+	body {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	/*header styles*/
+	header{
+		height:100px;
+	}
+
+
+/* nav styles */
+	a.menu-link {
+     display: none;
+  }
+  .js nav[role=navigation] {
+    max-width: none;
+    position: static;
+    width: auto;
+  }
+  .wrap.active {
+    left: 0;
+  }
+ nav[role=navigation] ul {
+    margin: 0;
+    border: 0;
+    background-color:#B1824B;	
+  }
+  
+  nav[role=navigation]  li {
+    display: inline-block;
+    margin: 0 0.25em 0 0;
+  }
+nav[role=navigation] li a {
+    border: 0;
+  }
+
+	/*mission styles*/
+	.mission {
+		
+		/*overflow: hidden;*/
+		background: url(../images/beachMd.jpg) no-repeat;
+		padding-top:0;
+	}
+	.mission h1{
+		margin:0;
+		padding-top:0.5em;
+
+	}
 	/* article styles */
 	
 	article section {
@@ -334,33 +336,22 @@ input[type="submit"] {
 	
 }
 /*desktop styles*/
-@media only screen and (min-width:769px) {
+@media only screen and (min-width:800px) {
 
 	body {
-		max-width: 1080px;	
-	}
-	#mainNav{
-		max-width:inherit;
-		
+		max-width: 1080px;
 	}
 	
-	#mainNav a {
-		font-size: 1.1em;
-		padding:.5em 1.3em 0.25 1.5em;		
-		background-color:#B1824C;
-	}
 
-	#mainNav li {
-		margin-right:0;
-		
+	#mainNav a{
+		font-size: 1em;
+		text-align: center;
+		padding:  1em 2em;
 	}
-
 	
 	/*mission styles*/
 	.mission {
 		height: 610px;
-		padding-left: 3.9%;
-		overflow: hidden;
 		background:url(../images/beachLrg.jpg) no-repeat;
 		position: relative;
 	}
