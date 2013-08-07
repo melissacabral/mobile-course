@@ -14,6 +14,11 @@ a:hover,
 a:focus{
 	color:#535b97;
 	background-color: #eee;
+	outline: none;
+}
+a:active{
+
+	outline: none;
 }
 /*
 == fluid images  
@@ -52,20 +57,23 @@ body {
 
 
 /*added to look nice on small screens.  reset this in min-800*/
-header, .call-to-action, .intro-text,.features, .blog-posts, .twitter{
+.call-to-action, .intro-text,.features, .blog-posts, .twitter{
 	padding:.75em; 
 }
 
 header{
-	position:relative;
+	position: relative;
 	background-color: #1f1f1f; /*added to replace the large background image on small screens*/
+	padding: 1em 0 0 0;
 	
 }
 header h1 {
 	background-image: url(../images/logo.png);
 	width: 11.5em; /*184/16*/
 	height: 2.185em; /*35/16*/
+	margin:0 0 1em 1em;
 }
+
 header h1 a {
 	text-indent: -99999999px;
 	outline: none;
@@ -160,31 +168,42 @@ footer {
 
 /*for smallest screens, hide the navigation temporarily so it doesn't get in the way of the layout. 
 TODO:  add the toggle button for small screens*/
-header .nav-toggle{
-	background-color: #505793;
+.nav-toggle{
+	display: none;
 }
-header nav{
+.js .nav-toggle{
+	background-color: #505793;
+	display: block;
+	color: white;
+	padding: .75em;
+	text-decoration: none;
+}
+.js .nav-toggle:before{
+	content: '\00bb\00a0'; /*arrow and nbsp*/
+}
+.js #menu {
+	background-color: #505793;
 	overflow: hidden;
 	max-height: 0;
-	background-color: 
+}
+#menu.active {
+	max-height: 15em;
 }
 
-header nav li{
-	display: inline-block;
+#menu li{
+	
 	line-height: 3em;
-
-
 }
-header nav li a{
+#menu li a{
 	padding: 0 1.33em; 
 	font-size: 1.125em; 
 	display: block;
 	color:white;
 	text-decoration: none;
 }
-header nav li a:hover, 
-header nav li a:focus,
-header nav li.current a{
+#menu li a:hover, 
+#menu li a:focus,
+#menu li.current a{
 	color:white;
 	background-color: rgba(0,0,0,.15)
 }
@@ -353,17 +372,20 @@ Let the content dictate where to break!*/
 
 /* 650 and up. ADD THIS BREAKPOINT THIRD. navigation should return to normal horizontal list */
 @media only screen and (min-width : 650px) {
-	header{
-		padding: 1em 0 0 0;
+	.js a.nav-toggle {
+		display: none;
 	}
-	header h1{
-		margin:0 0 1em 1em;
+	.js #menu {
+		max-height: none;/*the nav was hidden on smaller screens, this brings it back*/
 	}
-	header nav {
-		max-height: inherit; /*the nav was hidden on smaller screens, this brings it back*/
+	 #menu {
+		 
 		background-color: #505793;
 		width: 100%;
 	}
+	#menu li{
+	display: inline-block;
+}
 
 }
 
@@ -388,7 +410,7 @@ Move layout styles from the code above down to this section
 	header{
 		background-color: transparent; /*remove the BG color applied to small screens*/
 	}
-	header nav{
+	#menu{
 		position: absolute;
 		top:80px;
 		background-color: transparent;
