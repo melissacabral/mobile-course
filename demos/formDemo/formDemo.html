@@ -17,6 +17,7 @@
   
 
 	<main>
+
 		<form action="" method="post" name="signup" id="signup">
 		 <fieldset id="generalInfo">
          	 <legend><span>Contact Info </span></legend>
@@ -39,9 +40,9 @@
 				 <span class="add-on"><i class="icon-url"></i></span>
                  <label for="url" class="label">URL</label>
 				<input name="url" type="url" id="url" required placeholder="http://www.maryjoe.com">
-			
+
 				 <label for="message"> Your Message </label>
-                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5"></textarea>      
+                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      
 		
         
          <label for="state">State</label>
@@ -136,11 +137,10 @@
                 
                 </fieldset>
                 
+                <input type="submit" name="submit" id="submit" value="Submit"> 
+                <button type="reset">Reset</button>
         
-        
-        
-                <input type="submit" name="submit" id="submit" value="Submit">
-
+               
 		</form>
         
         </main>
