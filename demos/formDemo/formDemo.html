@@ -30,16 +30,20 @@
 				<input name="address" type="text" id="address" title="Please enter your full address" placeholder="123 First Street, San Diego, CA 92115">
                 
                 <span class="add-on"><i class="icon-mobile"></i></span>
-                <label for="phone" class="label">E-mail Address</label>
+                <label for="phone" class="label">Phone</label>
 				<input name="phone" type="phone" id="phone" required placeholder="619-234-5678">
                 
 				<span class="add-on"><i class="icon-mail"></i></span>
 				<label for="email" class="label">E-mail Address</label>
-				<input name="email" type="email" id="email" required placeholder="mayjo@youremail.com">
+				<input name="email" type="email" id="email" required placeholder="mayjo@youremail.com" pattern="([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))">
 			
 				 <span class="add-on"><i class="icon-url"></i></span>
                  <label for="url" class="label">URL</label>
 				<input name="url" type="url" id="url" required placeholder="http://www.maryjoe.com">
+
+
+                 <label for="num" class="label">Year of Birth</label>
+                <input name="num" type="number" id="num" min="1950" max="2010" placeholder="just numbers please">
 
 				 <label for="message"> Your Message </label>
                  <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      

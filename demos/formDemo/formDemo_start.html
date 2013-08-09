@@ -1,103 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Form Fun</title>
-<link rel="stylesheet" href="css/normalize.css">
-<link href="css/form.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/formDemo.css">
+  </head>
 
-<style>
-#signup label.error{
-	font-size:0.8em;
-	color:#f00;
-	font-weight:bold;
-	font-variant:normal;
-	display:block;
-	
-}
-#signup input.error,
-#signup select.error {
-	background:rgba(153,0,0,0.25);
-	background:#ffa988;
-	border:2px solid #F00;
-}
+  <body>
+    <main>
 
-</style>
-
-<script src="scripts/jquery-1.10.1.min.js"></script>
-<script src="scripts/jquery.validate.min.js"></script>
-<script>
-//select field does not validate if required is included
-//<script src="scripts/jquery-1.7.2.min.js">
-$(document).ready(function() {
-$('#signup').validate(
-{
-		rules:{
-			name:'required',
-			email:{
-				required:true,
-				email:true	
-			},//end email
-			url:{
-				required:true,
-                url:true;
-				
-			},
-			hobby:'required',//endurl
-			gender:'required'//end confirm password
-		},//end rules
+		<form action="" method="post" name="signup" id="signup">
+		 
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="email" id="email" pattern="([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))">
+			
+				 
 		
-			messages:{
-				name:{
-					required:"Please supply your name"
-				},
-				email:{
-					required:"Please supply your email address",
-					email:"this is not a valid email address"
-				},//email message end
-				url:{
-					required:"Please enter your url"
-					
-				},//url end
-				gender:{
-					required:"Please choose a gender"
-				},
-				hobby:{
-					required:"Please choose an hobby"
-				}//hobby end
-			},//end messages
-			errorPlacement:function(error,element){
-				if(element.is(":radio")||element.is(":checkbox")){
-					error.appendTo(element.parent());
-					//need to fix placement. add parent
-				}else{
-					error.insertAfter(element);
-				}
-			}//end error function
-	}
-
-
-
-);
-}); // end ready
-</script>
-   
-</head>
-<body>
-
-<form action="" method="post" name="signup" id="signup" novalidate >
- <fieldset id="generalInfo">
-    <legend><span>Contact Info </span></legend>
-        <label for="name" class="label">Name </label>
-        <input name="name" type="text" class="required" required>
         
-        <label for="email">E-mail Address</label>
-        <input name="email" type="text" class="required" required>
-        
-        <label for="url" class="label">URL</label>
-				<input name="url" type="url" id="url" class="required" placeholder="http://www.maryjoe.com" required>
-                
-                <label for="state">State</label>
+         <label for="state">State</label>
               <select name="state" id="state" tabindex="150">
               	<option value="">--Please select one--</option>
               	<option value="FU">None of Your Business</option>
@@ -152,17 +72,12 @@ $('#signup').validate(
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-
-				 <label for="message"> Your Message </label>
-                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      
-
-        </fieldset>
+			
+			
+	
         
-        <fieldset id="personalInfo">
-        	<legend><span>Personal Info</span></legend>
-            <div>
-            	<div class="label">Please Select Your gender </div>
-            	<input  type="radio" name="gender" id="gender" value="male" class="required" required title="Please select an option">
+            	
+            	<input  type="radio" name="gender" id="gender" value="male">
 				<label for="male">Male</label>
 				<input type="radio" name="gender" id="female" value="female">
 				<label for="female">Female</label>
@@ -170,7 +85,7 @@ $('#signup').validate(
 				<label for="neither">Neither</label>
                 <input type="radio" name="gender" id="both" value="both">
 				<label for="both">Both</label>
-                </div>
+                
                 <label for="planet" class="label planet">Planet of Birth</label>
 				<select name="planet" id="planet" class="required" title="Please choose a planet">
 					<option value="">--Please select one--</option>
@@ -180,21 +95,23 @@ $('#signup').validate(
 					<option value="alpha centauri">Alpha Centauri</option>
 					<option value="forget about it">You've never heard of it</option>
 				</select>
-
+				
             	<div class="label">Hobbies</div>
-				<input name="hobby" type="checkbox" id="sleeping" value="sleeping" class="required" required>
+				<input name="hobby" type="checkbox" id="sleeping" value="sleeping" class="required" title="choose an hobby">
 				<label for="sleeping">Sleeping</label>
 				<input name="hobby" type="checkbox" id="coding" value="coding">
 				<label for="coding">Coding</label>
 				<input name="hobby" type="checkbox" id="eating" value="eating">
 				<label for="eating">Eating</label>
                 
-                </fieldset>
+            
+                
+            
         
-        <input type="submit" name="submit" id="submit" value="Submit">
-    
-    </form>
-    
-</body>
+               
+		</form>
+        
+        </main>
+	
+  </body>
 </html>
-    

@@ -1,103 +1,110 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Form Fun</title>
-<link rel="stylesheet" href="css/normalize.css">
-<link href="css/form.css" rel="stylesheet">
+  <head><!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/fontello.css">
+    
+ 
+    <link rel="stylesheet" href="css/formDemo.css">
 
-<style>
-#signup label.error{
-	font-size:0.8em;
-	color:#f00;
-	font-weight:bold;
-	font-variant:normal;
-	display:block;
-	
-}
-#signup input.error,
-#signup select.error {
-	background:rgba(153,0,0,0.25);
-	background:#ffa988;
-	border:2px solid #F00;
-}
 
-</style>
-
-<script src="scripts/jquery-1.10.1.min.js"></script>
+       <script src="scripts/jquery-1.10.2.min.js"></script>
 <script src="scripts/jquery.validate.min.js"></script>
 <script>
-//select field does not validate if required is included
-//<script src="scripts/jquery-1.7.2.min.js">
 $(document).ready(function() {
 $('#signup').validate(
 {
-		rules:{
-			name:'required',
-			email:{
-				required:true,
-				email:true	
-			},//end email
-			url:{
-				required:true,
-                url:true;
-				
-			},
-			hobby:'required',//endurl
-			gender:'required'//end confirm password
-		},//end rules
-		
-			messages:{
-				name:{
-					required:"Please supply your name"
-				},
-				email:{
-					required:"Please supply your email address",
-					email:"this is not a valid email address"
-				},//email message end
-				url:{
-					required:"Please enter your url"
-					
-				},//url end
-				gender:{
-					required:"Please choose a gender"
-				},
-				hobby:{
-					required:"Please choose an hobby"
-				}//hobby end
-			},//end messages
-			errorPlacement:function(error,element){
-				if(element.is(":radio")||element.is(":checkbox")){
-					error.appendTo(element.parent());
-					//need to fix placement. add parent
-				}else{
-					error.insertAfter(element);
-				}
-			}//end error function
-	}
+        rules:{
+            name:'required',
+            email:{
+                required:true,
+                email:true  
+            },//end email
+            url:{
+                required:true,
+                url:true
+                
+            },
+              phone:{
+                    minlength:12
 
+                }
+        },//end rules
+        
+            messages:{
+                name:{
+                    required:"Please supply your name"
+                },
+                email:{
+                    required:"Please supply your email address",
+                    email:"this is not a valid email address"
+                },//email message end
+                url:{
+                    required:"Please enter your url"
+                    
+                },
+                phone:{
+                    minlength:"please use this format: xxx-xxx-xxxx"
 
+                }
+                //password confirm message end
+            },//end messages
+            errorPlacement:function(error,element){
+                if(element.is(":radio")||element.is(":checkbox")){
+                    error.appendTo(element.parent());
+                }else{
+                    error.insertAfter(element);
+                }
+            }//end error function
+    }
 
 );
 }); // end ready
 </script>
-   
-</head>
-<body>
+    
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-->
 
-<form action="" method="post" name="signup" id="signup" novalidate >
- <fieldset id="generalInfo">
-    <legend><span>Contact Info </span></legend>
-        <label for="name" class="label">Name </label>
-        <input name="name" type="text" class="required" required>
-        
-        <label for="email">E-mail Address</label>
-        <input name="email" type="text" class="required" required>
-        
-        <label for="url" class="label">URL</label>
-				<input name="url" type="url" id="url" class="required" placeholder="http://www.maryjoe.com" required>
+  </head>
+  <body>
+  
+
+	<main>
+
+		<form action="" method="post" name="signup" id="signup">
+		 <fieldset id="generalInfo">
+         	 <legend><span>Contact Info </span></legend>
+			<span class="add-on"><i class="icon-user"></i></span>
+				<label for="name" class="label">Name </label>
+				<input name="name" type="text" id="name" class="required" title="Please enter your full name" autofocus placeholder="Mary Joe Harris">
                 
-                <label for="state">State</label>
+                <span class="add-on"><i class="icon-location"></i></span>
+                <label for="address" class="label">Full Address </label>
+				<input name="address" type="text" id="address" title="Please enter your full address" placeholder="123 First Street, San Diego, CA 92115">
+                
+                <span class="add-on"><i class="icon-mobile"></i></span>
+                <label for="phone" class="label">Phone</label>
+				<input name="phone" type="phone" id="phone" class="required" placeholder="619-234-5678">
+                
+				<span class="add-on"><i class="icon-mail"></i></span>
+				<label for="email" class="label">E-mail Address</label>
+				<input name="email" type="email" id="email" placeholder="mayjo@youremail.com">
+			
+				 
+                <span class="add-on"><i class="icon-url"></i></span>
+                 <label for="url" class="label">URL</label>
+				<input name="url" type="url" id="url"  placeholder="http://www.maryjoe.com">
+
+                <label for="num" class="label">Year of Birth</label>
+                <input name="num" type="number" id="num" min="1950" max="2010" placeholder="just numbers please">
+
+				 <label for="message"> Your Message </label>
+                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      
+		
+        
+         <label for="state">State</label>
               <select name="state" id="state" tabindex="150">
               	<option value="">--Please select one--</option>
               	<option value="FU">None of Your Business</option>
@@ -152,17 +159,15 @@ $('#signup').validate(
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
               </select>
-
-				 <label for="message"> Your Message </label>
-                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      
-
+			
+			
+		
         </fieldset>
         
         <fieldset id="personalInfo">
         	<legend><span>Personal Info</span></legend>
-            <div>
             	<div class="label">Please Select Your gender </div>
-            	<input  type="radio" name="gender" id="gender" value="male" class="required" required title="Please select an option">
+            	<input  type="radio" name="gender" id="gender" value="male" add titlesgt>
 				<label for="male">Male</label>
 				<input type="radio" name="gender" id="female" value="female">
 				<label for="female">Female</label>
@@ -170,7 +175,7 @@ $('#signup').validate(
 				<label for="neither">Neither</label>
                 <input type="radio" name="gender" id="both" value="both">
 				<label for="both">Both</label>
-                </div>
+                
                 <label for="planet" class="label planet">Planet of Birth</label>
 				<select name="planet" id="planet" class="required" title="Please choose a planet">
 					<option value="">--Please select one--</option>
@@ -180,9 +185,9 @@ $('#signup').validate(
 					<option value="alpha centauri">Alpha Centauri</option>
 					<option value="forget about it">You've never heard of it</option>
 				</select>
-
+				
             	<div class="label">Hobbies</div>
-				<input name="hobby" type="checkbox" id="sleeping" value="sleeping" class="required" required>
+				<input name="hobby" type="checkbox" id="sleeping" value="sleeping">
 				<label for="sleeping">Sleeping</label>
 				<input name="hobby" type="checkbox" id="coding" value="coding">
 				<label for="coding">Coding</label>
@@ -190,11 +195,14 @@ $('#signup').validate(
 				<label for="eating">Eating</label>
                 
                 </fieldset>
+                
+                <input type="submit" name="submit" id="submit" value="Submit"> 
+                <button type="reset">Reset</button>
         
-        <input type="submit" name="submit" id="submit" value="Submit">
-    
-    </form>
-    
-</body>
+               
+		</form>
+        
+        </main>
+	
+  </body>
 </html>
-    
