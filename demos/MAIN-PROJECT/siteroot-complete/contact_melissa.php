@@ -82,17 +82,17 @@
 
 
               <label for="message"> Your Message </label>
-              <textarea id="message" name="message" placeholder="Write your message" spellchek="true" cols="45" rows="5"><?php sticky_field($message); ?></textarea>
+              <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5"><?php sticky_field($message); ?></textarea>
 
           </fieldset>
 
           <fieldset id="generalInfo">
            <legend>Your Contact Info </legend>
            <label for="name" class="label">Name </label>
-           <input name="name" id="name" type="text" class="required" required autofocus placeholder="Jane Doe" value="<?php sticky_field($name); ?>" />
+           <input name="name" id="name" type="text" class="required" required value="<?php sticky_field($name); ?>" />
 
            <label for="email">E-mail Address</label>
-           <input name="email" type="email" class="required" required placeholder="youremail@email.com" value="<?php sticky_field($email); ?>" />
+           <input name="email" type="email" class="required" required value="<?php sticky_field($email); ?>" />
 
            <label for="url" class="label">URL</label>
            <input name="url" type="url" id="url" placeholder="http://www.maryjoe.com" value="<?php sticky_field($url); ?>">
