@@ -135,7 +135,6 @@ nav[role=navigation] {
 nav[role=navigation] ul {
   margin: 0;
   padding: 0;
-  border-top: 1px solid #808080;
 }
 
 nav[role=navigation] ul li{
@@ -151,9 +150,6 @@ nav[role=navigation] li a {
 }
 nav[role=navigation] li a:hover{
 	background-color:#4E2D26;
-}
-.lorem {
-  clear: both;
 }
 
 /* ====== end nav =========== */
@@ -286,9 +282,7 @@ input[type="submit"] {
     position: static;
     width: auto;
   }
-  .wrap.active {
-    left: 0;
-  }
+
  nav[role=navigation] ul {
     margin: 0;
     border: 0;

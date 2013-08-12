@@ -84,18 +84,9 @@ header h1{
 	/*text-align:center;*/
 }
 
-/*#mainNav h2, #mainNav #menuToggle {
-	display: none;
-}*/
-
 /*nav styles*/
 
-select{
-	padding: 1em;
-    position: absolute;
-    right: 5px;
-    top: 70px;
-}
+ 
 
 /*misson styles*/
 
@@ -199,8 +190,8 @@ input[type="submit"] {
 		text-align:left;
 	}
 
-/*nav styles*/
-#mainNav{
+	/*nav styles*/
+	#mainNav{
 	background-color:#B1824C;
 	width: 100%;
 	margin: 0;
@@ -210,12 +201,12 @@ input[type="submit"] {
 	border-bottom:#4E2D26 3px solid;	
 }
 	
-nav ul {
+	nav ul {
 	list-style: none;
 	padding-left:0;
 }
 
-#mainNav a, #mainNav h3 {
+	#mainNav a, #mainNav h3 {
 	text-transform: uppercase;
 	text-align: center;
 	display: block;
@@ -234,13 +225,11 @@ nav ul {
 	padding-bottom:0.02em;	
 }
 
-#mainNav a:hover{
+	#mainNav a:hover{
 		background-color:#4E2D26;
 	}
 
-#mainNav li {
-	/*margin: 0;
-	float: none;*/
+	#mainNav li {
 	position: relative;
 	float: left;
 	width: auto;
@@ -248,11 +237,10 @@ nav ul {
 }
 
 
-
 	#mainNav {
-		width: 100%;
-		padding: 0;
-		margin-bottom:0;
+	width: 100%;
+	padding: 0;
+	margin-bottom:0;
 	border-bottom:#4E2D26 3px solid;	
 	}
 	

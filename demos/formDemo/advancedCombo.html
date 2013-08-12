@@ -40,6 +40,7 @@ $('#signup').validate(
 			},//end email
 			url:{
 				required:true,
+                url:true;
 				
 			},
 			hobby:'required',//endurl
@@ -153,7 +154,7 @@ $('#signup').validate(
               </select>
 
 				 <label for="message"> Your Message </label>
-                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5"></textarea>      
+                 <textarea id="message" name="message" placeholder="Write your message" cols="45" rows="5" spellcheck="true"></textarea>      
 
         </fieldset>
         

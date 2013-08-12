@@ -155,7 +155,7 @@ header h2 {
 /*
 == nav styles
 @source http://codepen.io/bradfrost/pen/sHvaz
-@see scripts/main.js 
+@see scripts/main.js, top
 */
 
 a.menu-link { /*  toggle menu button */
@@ -169,7 +169,7 @@ a.menu-link { /*  toggle menu button */
 }
 #menu {
 	background-color:#64384f;  /* dk purple */
-	clear: both;
+	/*clear: both;*/
 	-webkit-transition: all 0.3s ease-out;  /* CSS enhancement - animation */ 
 	-moz-transition: all 0.3s ease-out;
 	-ms-transition: all 0.3s ease-out;
@@ -495,19 +495,18 @@ aside .developer-blog h3{
 }
 
 /* 
- == Tiny Nav 
- <select> replaces submenu   
- @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
- @see scripts/main.js 
+ == Select Nav 
+ <select> replaces submenu 
+ @ source https://github.com/mattkersley/Responsive-Menu 
+ Alternative method, @source http://codepen.io/bradfrost/pen/hkuzAfrom BradFrost
+ @see scripts/main.js (bottom)
  */
 
  .product-tour select {
  	width: 100%;
  	font-size:1.3em; /* make it big and easy to tap */
  }
- .tinynav { 
- 	display: block
- }
+
  .tour-list { 
  	display: none 
  }

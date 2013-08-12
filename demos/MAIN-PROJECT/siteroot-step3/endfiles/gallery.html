@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Metamorph - An Adaptive Experience</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- 57x57 older iPhone and Android devices -->
+  <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-precomposed.png">
+  <!-- iPad 1 and 2 & iPad mini -->
+  <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+  <!-- iPhone 4, 4S, 5 and iPod Touch -->
+  <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  <!-- iPad 3rd gen -->
+  <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link href="css/main.css" rel="stylesheet" media="screen, projection">
+</head>
+<body>
+  <header id="pageHeader" role="banner">
+   <h1><a href="index.html">MetaMorph</a></h1>
+   <h2>Your Visual Life</h2>
+ </header>
+<a href="#menu" class="menu-link"><i class="icon-chevron-sign-right"></i> Menu</a>
+ <nav id="menu" role="navigation" class="cf">
+   <ul>
+    <li class="current"><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="contact.php">Contact Us</a></li>
+  </ul>
+</nav>
+<main role="main" class="cf">
+
+ <div class="page-content"> 
+  <article id="gallery" class="cf">
+    <h1>Gallery</h1>
+
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+    <div class="image-box">
+      <img src="http://placekitten.com/400/250" />
+      <h3>caption</h3>
+    </div>
+
+  </article>
+
+</div>
+<aside role="complementary" class="cf">
+  <section class="product-tour">
+   <h2>Product Tour</h2>
+   <ul class="tour-list">
+    <li> <a href="#">Free Forever</a> </li>
+    <li> <a href="#"> Sync to the Cloud</a> </li>
+    <li> <a href="#"> Magical Powers</a> </li>
+    <li> <a href="#">Technical Hooey</a> </li>
+    <li> <a href="#">Award Winning Stuff</a> </li>
+  </ul>
+</section>
+<section class="developer-blog">
+ <h2>developer Blog</h2>
+ <article> <img src="http://placekitten.com/400/300" alt="a placeholder kitten"  />
+  <h3>100% more kitten</h3>
+</article>
+<article> <img src="http://placepuppy.it/400/300"  alt="a placeholder puppy" />
+  <h3>Still plenty of puppy</h3>
+</article>
+</section>
+</aside>
+</main>
+<footer id="page-footer" class="cf">
+ <section>
+  <h2>A Footer Widget</h2>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua.
+  </p>
+</section>
+<section>
+  <h2>A Footer Widget</h2>
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p> 
+</section>
+<section>
+  <h2>A Footer Widget</h2>
+  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p> 
+</section>
+<a href="#" class="action"><i class="icon-arrow-up"></i> Back to Top</a>
+</footer>
+
+<!--
+//use the modernizr load to load up external scripts. This will load the scripts asynchronously, but the order listed matters. Although it will load all scripts in parallel, it will execute them in the order listed -->
+<script src="scripts/modernizr.custom.29102.js"></script>
+  <script>
+  //use modernizr to load scripts asynchronously, but the order matters.It will execute them in order loaded
+  Modernizr.load([
+  {
+    load:[
+    'http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js',
+    'scripts/toggle.js',
+    'scripts/selectMenu.js',
+    'scripts/fluidvids.min.js'
+    ]
+  },
+  { 
+    //test for media query support, if not there, load respond.js
+    test:Modernizr.mq('only all'),
+    //if not supported, load file
+    nope:'scripts/respond.min.js'
+
+  }
+  ]);
+</script>
+
+</body>
+</html>
