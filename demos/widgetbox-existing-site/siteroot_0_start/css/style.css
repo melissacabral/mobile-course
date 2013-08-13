@@ -147,7 +147,7 @@ aside {
 	border:solid 3px #ddd;
 
 }
-.tweets {
+.tweeter {
 	width: 240px; /* TODO: convert this to percentage (25) */
 	float: right;
 }

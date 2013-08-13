@@ -168,11 +168,14 @@ footer {
 
 /*for smallest screens, hide the navigation temporarily so it doesn't get in the way of the layout. 
 TODO:  add the toggle button for small screens*/
-.nav-toggle{
+/*.nav-toggle{
 	display: none;
 }
+*/
+
 .js .nav-toggle{
 	background-color: #505793;
+
 	display: block;
 	color: white;
 	padding: .75em;
@@ -324,7 +327,7 @@ Let the content dictate where to break!*/
 
 /* 500 and up. ADD THIS BREAKPOINT SECOND. this is the point where the blog posts and features need to switch to 2-columns*/
 /* Large screens ----------- */
-@media only screen and (min-width : 500px) {
+@media only screen and (min-width : 31.25em) {
 	header .utilities {
 		display: block;
 		position: absolute;
@@ -368,10 +371,13 @@ Let the content dictate where to break!*/
 		padding: 0;
 	}
 }
+/*.nav-toggle{
+	display: none;
+}*/
 
 
 /* 650 and up. ADD THIS BREAKPOINT THIRD. navigation should return to normal horizontal list */
-@media only screen and (min-width : 650px) {
+@media only screen and (min-width : 40.625em) {
 	.js a.nav-toggle {
 		display: none;
 	}
@@ -394,7 +400,7 @@ Let the content dictate where to break!*/
 Move layout styles from the code above down to this section
 */
 /* Large screens ----------- */
-@media only screen and (min-width : 800px) {
+@media only screen and (min-width : 50em) {
 	body{
 		/*the background just wasn't working for smaller screens, background colors were used instead. */
 		background-image: url(../images/background_home_body.png);
@@ -404,11 +410,15 @@ Move layout styles from the code above down to this section
 		padding-top: 1.125em; /*20/16*/
 	}
 	/*added to look nice on small screens.  reset this in min-800*/
-	header, .call-to-action, .intro-text,.features, .blog-posts, .twitter{
+	 .call-to-action, .intro-text,.features, .blog-posts, .twitter{
 		padding:0; 
 	}
 	header{
-		background-color: transparent; /*remove the BG color applied to small screens*/
+	/*padding-top:1em;	*/
+	background-color: transparent; /*remove the BG color applied to small screens*/
+	}
+	header h1{
+
 	}
 	#menu{
 		position: absolute;

@@ -49,7 +49,7 @@ body {
 	min-width: 20em;/*320/16*/ /* STEP 1: converted to max width */
 	margin: 0 auto; /* center it within the parent */
 	position: relative;
-	padding-top: 1.125em; /*20/16*/
+	padding-top: 1.125em; /* 20/16 */
 }
 header{
 	position: relative;
@@ -89,7 +89,7 @@ header .utilities a {
 	text-decoration: none;
 }
 main {
-	margin-top: 480px; /* TODO this will need to change when the absolute positioning changes */
+	margin-top: 480px;  TODO this will need to change when the absolute positioning changes */
 }
 /* 
 == Call to action Banner
@@ -108,7 +108,7 @@ main {
 	top: 80px;
 	right: 0;	
 	line-height: 50px;	 
-	width: 50%; 
+	width: 52%; 
 }
 
 .cta-contents h2 {
@@ -194,7 +194,8 @@ header nav li.current a{
 	background-color: rgba(0,0,0,.15)
 }
 footer ul{
-	width:960px;
+	/*width:960px;*/
+	width:100%;
 	margin: 1em auto;
 }
 footer li{
