@@ -67,18 +67,20 @@ header{
 	padding: 1em 0 0 0;
 	
 }
+
 header h1 {
 	background-image: url(../images/logo.png);
-	width: 11.5em; /*184/16*/
-	height: 2.185em; /*35/16*/
-	margin:0 0 1em 1em;
+	width: 12.5em; /*184/16*/
+	height: 3.185em; /*35/16*/
+	background-repeat: no-repeat;
+	
 }
 
 header h1 a {
-	text-indent: -99999999px;
+	text-indent: -99999em;
 	outline: none;
 	display: block;
-	height: 100%;
+	height: 3.185em;
 }
 header .utilities {
 	display: none; /*decided these links are unimportant to small screen users*/
@@ -175,7 +177,7 @@ TODO:  add the toggle button for small screens*/
 
 .js .nav-toggle{
 	background-color: #505793;
-
+clear: both;
 	display: block;
 	color: white;
 	padding: .75em;
