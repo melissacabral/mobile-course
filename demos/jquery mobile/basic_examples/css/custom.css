@@ -1,0 +1,28 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700|Cabin+Condensed);
+body{
+	font-size:100%;
+	max-width: 480px;
+}
+h1, h2, h3, a[data-role="button"]{
+	font-family:Oswald, sans-serif;
+	font-size:2em;
+
+}
+header h1{
+	letter-spacing: 0.1em;
+}
+p, label, legend{
+	font-family:"Cabin Condensed", sans-serif;
+}
+img{
+	display:block;
+	width:95%;
+	margin-bottom:5%;
+}
+label{
+	padding-top:0.5em;
+}
+/*centering the pop up images */
+.ui-dialog-contain img{
+	margin:0 auto;
+}
