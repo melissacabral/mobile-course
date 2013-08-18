@@ -13,7 +13,7 @@ header h1{
 p, label, legend{
 	font-family:"Cabin Condensed", sans-serif;
 }
-img{
+img, iframe{
 	display:block;
 	width:95%;
 	margin-bottom:5%;
@@ -22,6 +22,23 @@ label{
 	padding-top:0.5em;
 }
 /*centering the pop up images */
-.ui-dialog-contain img{
+.ui-dialog-contain img,
+.ui-dialog-contain iframe{
 	margin:0 auto;
+}
+
+.ui-icon-facebook{
+	background: url(../images/fb_sm.png) no-repeat;
+}
+
+.ui-content{
+	background-color:#E7E2D9;
+}
+/* to change color of header. Use shortcut background */
+.ui-bar-a{
+	
+}
+/* to change color of body, behind content. Use shortcut background */
+.ui-body-c{
+	
 }

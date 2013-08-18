@@ -3,12 +3,13 @@
   <head>
     <title>Main Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" > 
+    <link rel="stylesheet" href="css/classDemo.min.css" />
+  <link rel="stylesheet" href="css/jquery.mobile.structure-1.3.2.min.css" />
   <link rel="stylesheet" href="css/custom.css" > 
 	<script src="scripts/jquery-1.10.2.min.js"></script>
 	<script src="scripts/jquery.mobile-1.3.2.min.js"></script>
   </head>
-  <body>
+  <body data-theme="b">
 
     <!-- =============================== home page  ============================== -->
 
@@ -21,14 +22,14 @@
         <h2> Welcome To jQuery Mobile</h2>
         <p> Seriously cross-platform with HTML5. jQuery mobile framework takes the "write less, do more" mantra to the next level: Instead of writing unique apps for each mobile device or OS, the jQuery mobile framework allows you to design a single highly-branded web site or application that will work on all popular smartphone, tablet, and desktop platforms. </p>
         <p>A unified, HTML5-based user interface system for all popular mobile device platforms, built on the rock-solid jQuery and jQuery UI foundation. Its lightweight code is built with progressive enhancement, and has a flexible, easily themeable design. </p>
-        <a href="http://www.jquerymobile.com" data-role="button" data-inline="true">jQuery Mobile site</a>
+        <a href="http://www.jquerymobile.com" data-role="button" data-inline="true" data-theme="b">jQuery Mobile site</a>
 
         <h2> Some Resources</h2>
 
         <div data-role="controlgroup" data-type="horizontal">
-          <a href="http://view.jquerymobile.com/1.3.2/dist/demos/widgets/icons/" data-role="button" data-inline="true">Icons</a>
-          <a href="http://view.jquerymobile.com/1.3.2/dist/demos/" data-role="button" data-inline="true">Demos</a>
-          <a href="http://jquerymobile.com/resources/#Inspiration" data-role="button" data-inline="true">Inspiration</a>
+          <a href="http://view.jquerymobile.com/1.3.2/dist/demos/widgets/icons/" data-role="button" data-inline="true" data-theme="b">Icons</a>
+          <a href="http://view.jquerymobile.com/1.3.2/dist/demos/" data-role="button" data-inline="true" data-theme="b" >Demos</a>
+          <a href="http://jquerymobile.com/resources/#Inspiration" data-role="button" data-inline="true" data-theme="b">Inspiration</a>
        </div>
 
       </main>
@@ -38,7 +39,7 @@
         <nav data-role="navbar">
          <ul>
            <li><a href="#home" data-icon="home" data-transition="slidedown" >Home</a></li>
-          <li><a href="#faq" data-icon="gear" data-transition="slide" > FAQ</a></li>
+          <li><a href="#faq" data-icon="gear" data-transition="slide"> FAQ</a></li>
           <li><a href="#photos" data-icon="grid" data-transition="slideup"> Photos</a></li>
           <li><a href="#videos" data-icon="grid" data-transition="pop"> Videos</a></li>
           <li><a href="#contact" data-icon="gear" data-transition="flip"> Contact</a></li>
@@ -267,7 +268,7 @@
 
  <!-- ========================= VIDEO LIST PAGE ====================================  -->
 
-      <div id="videos" data-role="page" data-title="video list">
+      <div id="videos" data-role="page" data-title="video list" data-theme="a">
       <header data-role="header" data-id="vs_header">
         <h1>VIDEOS</h1>
         <a href="#home" data-icon="home" data-iconpos="notext">Home</a>
@@ -276,7 +277,7 @@
 
         <section data-role="content">
         <ul data-role="listview" data-filter="true" data-inset="true" data-split-icon="facebook">
-          <li data-role="list-divider">CSS Videos</li>
+          <li data-role="list-divider" data-theme="b">CSS Videos</li>
           <li>
 
             <a href="#video1" data-rel="dialog">
@@ -396,7 +397,7 @@
 
    <!-- ============================= FORM PAGE ================================== -->
 
-    <div id="contact" data-role="page" data-title="Contact Form" >
+    <div id="contact" data-role="page" data-title="Contact Form" data-theme="c">
       <header data-role="header" data-id="vs_header">
         <h1>CONTACT</h1>
         <a href="#home" data-icon="home" data-iconpos="notext">Home</a></header>
@@ -650,11 +651,11 @@
 
     </form>
   </main>
-  <footer data-role="footer" data-position="fixed" data-id="demo_footer" >
+  <footer data-role="footer" data-position="fixed" data-id="demo_footer">
         
         <nav data-role="navbar">
          <ul>
-           <li><a href="#home" data-icon="home" data-transition="slidedown" >Home</a></li>
+           <li><a href="#home" data-icon="home" data-transition="slidedown">Home</a></li>
           <li><a href="#faq" data-icon="gear" data-transition="slide" > FAQ</a></li>
           <li><a href="#photos" data-icon="grid" data-transition="slideup"> Photos</a></li>
           <li><a href="#videos" data-icon="grid" data-transition="pop"> Videos</a></li>
