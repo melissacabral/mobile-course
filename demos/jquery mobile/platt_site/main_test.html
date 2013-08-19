@@ -19,23 +19,23 @@
 <body>
     <div id="homePage" data-role="page" data-title="Platt College SD">
 
-        <div data-role="header">
+        <header data-role="header">
            <h1>Platt College San Diego</h1>
 
-           <div data-role="navbar" data-iconpos="top" >
+           <nav data-role="navbar" data-iconpos="top" >
               <ul>
                   <li><a href="catalog.html"  data-icon="grid">Courses</a></li>
                   <li><a href="faq.html" data-icon="info">F.A.Q.</a></li>
                   <li><a href="contact.html" data-icon="forward">Contact Platt</a></li>
              </ul>
-        </div><!-- /navbar -->
-   </div><!-- /header -->
+        </nav><!-- /navbar -->
+   </header><!-- /header -->
 
-   <div data-role="content">
+   <main data-role="content">
 
         <div class="ui-content ui-body-e banner-graphic">
            <h2>Something for Everyone</h2>
-           <a href="catalog.html" data-role="button" >Browse the Course Catalog</a>
+           <a href="catalog.html" data-role="button" data-inline="true">Browse the Course Catalog</a>
       </div><!-- /ui-body-e --> 
       <br />
 
@@ -43,15 +43,15 @@
           <h2>Contact Us</h2>
           <div class="ui-grid-a">
 
-               <div class="ui-block-a">               
+               <section class="ui-block-a">               
                 <h3><a href="tel:+18001234567">1-800-123-4567</a></h3>  
-                <address>6250 El Cajon Blvd.<br />
-                    San Diego, CA 92115</address>            
-               </div>
+                <!-- http://html5doctor.com/the-address-element/-->
+                <div>6250 El Cajon Blvd.<br /> 
+                    San Diego, CA 92115</div>            
+               </section>
 
                <div class="ui-block-b">
-
-                    <button type="button" href="directions.html">Directions</button>
+                    <a href="directions.html" data-role="button" data-inline="true">Directions</a>
                </div>
 
           </div><!-- /grid-a -->
@@ -61,19 +61,19 @@
 
      <div id="map_canvas" style="height:240px" class="ui-content ui-content-inset"></div> 
 
+</main><!-- /content -->
 
-</div><!-- /content -->
-
-<div data-role="footer">
+<footer data-role="footer">
   <h4>
      <a href="http://platt.edu">Full Platt.edu Website</a>
 </h4>
-</div><!-- /footer -->
+</footer><!-- /footer -->
 </div>
 
 <script type="text/javascript">
 //platt lat long 32.764145, -117.063600
 //zoom 16
+
 $(function() {
       // Also works with: var yourStartLatLng = '59.3426606750, 18.0736160278';
       var yourStartLatLng = new google.maps.LatLng(32.764145, -117.063600);
@@ -88,8 +88,8 @@ $(function() {
        'bounds': false
   });
 
- });
 
+ });
 </script>
 </body>
 </html>

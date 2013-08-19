@@ -15,7 +15,7 @@
 		</div><!-- /navbar -->
 	</div><!-- /header -->
 	
-	<div data-role="content">
+	<main data-role="content">
 
 		<h2><a href="tel:+18001234567" data-role="button">1-800-123-4567</a></h2>
 		<h2>Contact by Department</h2>
@@ -45,12 +45,12 @@
 		<form action="path/to/parser.php" method="post"> 
 			<div data-role="fieldcontain">
 				<label for="name">Your Name:</label>
-				<input type="text" name="name" id="name" value=""  required />
+				<input type="text" name="name" id="name" value=""  required placeholder="Joe Smith"/>
 			</div>
 
 			<div data-role="fieldcontain">
 				<label for="textarea">Message or Question:</label>
-				<textarea cols="40" rows="8" name="textarea" id="textarea"></textarea>
+				<textarea cols="40" rows="8" name="textarea" id="textarea" spellcheck="true"></textarea>
 			</div>
 
 
@@ -118,10 +118,12 @@
 		</form>
 
 
-	</div>
-	<div data-role="footer">
-		stuff
-	</div><!-- /footer -->
+	</main>
+	<footer data-role="footer">
+  <h4>
+     <a href="http://platt.edu">Full Platt.edu Website</a>
+</h4>
+</footer><!-- /footer -->
 
 <script src="js/custom.js" type="text/javascript"></script>
 </div><!-- /page -->
