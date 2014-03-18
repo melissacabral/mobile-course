@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/flexmedia.css">
+    <title>Flexible Images Examples</title>
+</head>
+
+<body>
+    <header>
+        <h1> Let's Flex Our Media</h1>
+        <p>Background image is centered and gets cropped from both sides</p>
+    </header>
+    <main id="content" role="main" class="cf">
+        <section>
+            <h1>Different Fluid Images</h1>
+            <p>At first glance the challenge of making images responsive seems simple. As you dig a little deeper, however, you'll find it's one of the most difficult aspects of responsive design.</p>
+
+            <article id="float">
+                <h2>Floated To The left</h2>
+                <p>In this example, the image is simply floated to the left. It will never take more than 45% of its parent's size and it will never be smaller than 200px</p> 
+                <img src="images/floatimg.jpg" alt="dandelion" title="left float"/>
+                <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p> 
+                <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p><p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </article>
+
+            <article id="imgbanner">
+                <h2>Floated To The Right</h2>
+                <p>In this example, the image is floated to the right, and its container's overflow is set to hidden, so the image will be cropped from the right as the viewport reduces in size.</p>
+                <figure>
+                    <img src="images/smallBanner.jpg" alt="small flower banner" title="small banner floating right" />
+                </figure>
+                <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </article>
+
+        </section>
+
+        <aside>
+            <article id="first">
+                <h3>Max-width set to actual image size</h3>
+                <p> In this example, the image's width is set to 100% and max-width is set to the actual width of the image.</p>
+                <figure>
+                    <img src="images/sm_square1.jpg" alt="A caterpillar munching on a flower" /> 
+                </figure>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+            </article>
+
+        <article id="second">
+            <h3>Max-width set to 100%</h3>
+            <p> In this example, the image's width is set to 100% and max-width is set 100%, matching the parent's size but never exceeding it</p>
+            <figure>
+                <img src="images/sm_square2.jpg" alt="A caterpillar munching on a flower" /> 
+            </figure>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+        </article>
+
+        </aside>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/* CSS Document */
+/*convert xex to rgb: http://www.javascripter.net/faq/hextorgb.htm  */
+
+/*micro-clearfix by Nicolas Gallagher http://nicolasgallagher.com/micro-clearfix-hack/*/
+/* For modern browsers */
+.cf:before, .cf:after {
+	content:"";
+	display:table;
+}
+
+.cf:after {
+	clear:both;
+}
+
+.cf {
+	zoom:1;
+}
+/*apply natural box model*/
+/* apply a natural bnox layout to all elements*/
+*{-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+
+
+
+html{
+	background-color:#F9EFB4;
+}
+
+body {
+	width: 85%;
+	max-width:1000px;
+	margin: 1em auto 0;
+	font: 90%/1.5 Georgia, "Times New Roman", Times, serif;
+	/*max-width:1000px;*/
+	background:#FFF;
+	
+}
+
+main{
+	background:#FFF;
+	padding:2em;
+}
+header{
+	/* will crop from both sides when resized */
+	background-color:#7E6C58;
+	height:750px;
+	padding:0 1em;
+	
+}
+/*
+======================================
+custom style changes for slider
+=======================================
+*/
+
+#slider{
+	
+	max-width:610px;
+	margin:0 auto;
+
+
+}
+ul.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+/*.bx-controls-direction{
+	margin:0;
+	padding:0;}
+*/
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background-color:white;
+}
+
+.bx-wrapper .bx-next{
+	right:20px;
+}
+
+/* class created by slider css 
+.bx-viewport{
+	}
+
+#slider li{
+	max-width:100%;
+	margin:0 auto;
+	float:none;
+}*/
+/*
+===================================
+*/
+section {
+	float: left;
+	width: 60%;
+	margin-right: 5%;
+}
+article{
+	clear:both;
+}
+
+aside {
+	float: right;
+	width: 35%;
+	margin: 0;
+	background:#B5CE8A;
+	padding:1.5em;
+}
+
+
+/* TYPOGRAPHY */
+
+h1, h2, h3 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: normal;
+	margin: 0 0 .5em;
+}
+
+h1 {font-size: 2.6em; }
+h2 { font-size: 2em; }
+h3 {font-size: 1.6em; }
+
+article h2{
+	margin-top:1em;
+	color:#478635;
+}
+
+header h1{
+	color: white;
+    font-size: 5em;
+    line-height: 1;
+    padding-top: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+	
+}
+header p{
+	color: white;
+    line-height: 1.25;
+    margin-top: -1.5em;
+    text-align: center;
+    font-size:2em;
+    padding:1.5em 5em 0 5em;
+}
+header cite{
+	color:white;
+	font-size:0.5em;
+}
+
+article p:first-of-type {
+	font-size: 1.2em;
+	font-style: italic;
+}
+h1+p{
+	font-size:1.6em;
+	font-style: italic;
+	
+}
+
+a {
+	color: orange;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover {
+	color: green;
+}
+
+aside{
+	font-size:0.9em;
+}
+aside a{
+	color:#7E6C58;
+}
+

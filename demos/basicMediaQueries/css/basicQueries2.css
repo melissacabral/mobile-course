@@ -1,0 +1,96 @@
+/* COLORS ////////////
+mobile first: brick red #790000
+480px+ : orange #f8941d
+up to 599px and landscape: dark magenta #CA3BD9
+600px+ : light blue #448ccb
+800px+ : dark blue #003471
+1000px+ : dark green #406618
+widescreen (16:9): yellow #f7d86d
+2 ratio at least: gray #535353
+///////////////////////////////
+
+*/
+
+
+/*Mobile First! */
+html{
+	background-color:#333;
+}
+
+body{
+	/*font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;*/
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:100%;
+	background-color:#790000;
+	max-width: 1000px;
+	margin:0 auto;
+	color:white;
+}
+main{
+	display:block;
+	padding:2em;	
+}
+header{
+	font-size: 1.1em;
+    font-weight: normal;
+    letter-spacing: 0.3em;
+    padding: 2em 0 0 2em;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 485px) {
+  /* 480 =================================================== */
+  body{
+	background-color:#f8941d;
+	
+	}
+}
+
+
+@media only screen and (min-width: 600px) {
+  /* 600 =================================================== */
+    body{
+	background-color:#448ccb;
+	
+	}
+}
+@media only screen and (min-width: 800px) {
+  /* 800 =================================================== */
+    body{
+	background-color:#003471;
+	
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+  /* 1382 =================================================== */
+  body {
+    background-color:#406618;
+  }
+}
+/* is this a widescreen?
+@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { 
+body {
+    background-color:#f7d86d;
+	color:#4A4A4A;
+	
+  } }*/
+
+@media screen and (orientation:landscape) and (max-width: 599px){
+/*landscape =================================================== */
+
+body{
+	background-color:#CA3BD9;
+	color:white;
+}
+}
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+  /* 2x =================================================== */
+  body{
+  	font-size:200%;
+  	background-color:#535353;
+  }
+}
+

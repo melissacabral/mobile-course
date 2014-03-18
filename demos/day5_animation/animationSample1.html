@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Animations and Transitions Example</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="scripts/jquery-1.11.0.min.js"></script>
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <script>
+	$(document).ready(function() {
+			$('#slideUpBtn').click(function() {
+						$('#object').removeClass();	
+						$('#object').addClass("slideUp");
+				
+			});
+
+		$('#fadeInBtn').click(function() {
+						$('#object').removeClass();				
+						$('#object').addClass("fadeIn");
+					
+			});
+
+		$('#pulseBtn').click(function() {
+						$('#object').removeClass();				
+						$('#object').addClass("pulse");
+					
+			});	
+
+		$('#floatBtn').click(function() {
+						$('#object').removeClass();				
+						$('#object').addClass("floating");
+					
+			});
+
+			$('#tossingBtn').click(function() {
+						$('#object').removeClass();				
+						$('#object').addClass("tossing");
+					
+			});	
+
+				});	
+
+
+	</script>
+
+
+</head>
+<body>
+	<header>
+		<h1> Animation Playground</h1>
+	</header>
+
+	<main>
+
+		<section>
+			<img src="images/alien.png" class="tossing" id="object">
+		</section>
+
+		<section>
+			<h2>Select Your Animation</h2>
+			<div class="container">
+				<a href="#" id="slideUpBtn" class="button">Slide Up</a>
+				<a href="#" id="fadeInBtn" class="button">Fade In</a>
+				<a href="#" id="pulseBtn" class="button">Pulse</a>
+				<a href="#" id="floatBtn" class="button">Floating</a>
+				<a href="#" id="tossingBtn" class="button">Tossing</a>
+			</div>
+
+
+		</section>
+
+	</main>
+
+
+</body>
+</html>
